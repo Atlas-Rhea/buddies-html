@@ -1,7 +1,9 @@
-<nav class="flex items-center justify-between px-4 py-3 bg-[#f8faf5] max-w-[1440px] mx-auto">
+<nav class="flex items-center justify-between px-4 py-3 bg-[#f8faf5] max-w-[1440px] w-full mx-auto">
   <!-- Logo -->
-  <div class="flex items-center gap-3">
-    <img src="assets/buddies-logo.svg" alt="The Buddies Open logo" class="h-8 w-auto md:h-[73px] md:w-[235px]" loading="lazy" />
+  <div class="flex items-center gap-3 min-w-0 flex-shrink">
+    <img src="assets/buddies-logo.svg" alt="The Buddies Open logo"
+      class="h-6 max-w-[60px] navshrink:h-8 navshrink:max-w-[100px] md:h-[73px] md:max-w-[235px] transition-all duration-200"
+      loading="lazy" />
   </div>
   <!-- Hamburger for mobile -->
   <button id="mobile-menu-toggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10" aria-label="Open menu" aria-expanded="false">
@@ -10,18 +12,21 @@
     <span class="block w-6 h-0.5 bg-[#406c3a]"></span>
   </button>
   <!-- Nav links (hidden on mobile) -->
-  <ul class="hidden md:flex flex-1 justify-center gap-6 lg:gap-8 text-[#5a7a5a] text-base lg:text-lg xl:text-xl font-medium px-4 lg:px-6">
-    <li><a href="#about" class="hover:underline">About</a></li>
-    <li><a href="#event" class="hover:underline whitespace-nowrap">This Years Event</a></li>
-    <li><a href="#rules" class="hover:underline">Rules</a></li>
-    <li><a href="#champions" class="hover:underline">Champions</a></li>
-    <li><a href="#sponsors" class="hover:underline">Sponsors</a></li>
-    <li><a href="#gallery" class="hover:underline">Gallery</a></li>
-  </ul>
+  <div class="hidden md:flex flex-1 justify-center min-w-0">
+    <ul class="flex justify-center gap-4 lg:gap-8 text-[#5a7a5a] text-base navshrink:text-sm lg:text-lg xl:text-xl font-medium px-2 lg:px-6 min-w-0">
+      <li class="min-w-0"><a href="#about" class="hover:underline block max-w-full">About</a></li>
+      <li class="min-w-0"><a href="#event" class="hover:underline whitespace-nowrap block max-w-full">This Years Event</a></li>
+      <li class="min-w-0"><a href="#rules" class="hover:underline block max-w-full">Rules</a></li>
+      <li class="min-w-0"><a href="#champions" class="hover:underline block max-w-full">Champions</a></li>
+      <li class="min-w-0"><a href="#sponsors" class="hover:underline block max-w-full">Sponsors</a></li>
+      <li class="min-w-0"><a href="#gallery" class="hover:underline block max-w-full">Gallery</a></li>
+    </ul>
+  </div>
   <!-- Donate button -->
-  <a href="#donate" class="hidden md:flex bg-[#406c3a] text-white rounded-full px-6 py-2 items-center gap-2 font-medium shadow-md hover:bg-[#335c3a] transition min-w-[100px] justify-center">
+  <a href="#donate"
+    class="hidden md:flex bg-[#406c3a] text-white rounded-full px-4 py-2 items-center gap-2 font-medium shadow-md hover:bg-[#335c3a] transition min-w-0 flex-shrink min-w-[40px] navshrink:min-w-[40px] md:min-w-[100px] justify-center">
     <span class="w-3 h-3 bg-white rounded-full inline-block"></span>
-    DONATE
+    <span class="block max-w-full">DONATE</span>
   </a>
 </nav>
 <!-- Mobile menu (hidden by default, toggled by hamburger) -->

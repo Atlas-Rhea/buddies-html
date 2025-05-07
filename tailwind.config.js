@@ -1,5 +1,9 @@
 module.exports = {
-  content: ['./src/**/*.{html,js,jsx,ts,tsx}'],
+  content: [
+    './src/**/*.{html,js,jsx,ts,tsx}',
+    './src/sections/**/*.html',
+    './index.html'
+  ],
   theme: {
     extend: {
       colors: {
@@ -22,6 +26,9 @@ module.exports = {
       },
       letterSpacing: {
         wide: '0.05em',
+      },
+      screens: {
+        'navshrink': '1064px',
       },
     },
     container: {

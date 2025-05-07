@@ -12,10 +12,12 @@
     <div id="app">
       <div id="sections">
         <!-- SECTIONS_START -->
-<nav class="flex items-center justify-between px-4 py-3 bg-[#f8faf5] max-w-[1440px] mx-auto">
+<nav class="flex items-center justify-between px-4 py-3 bg-[#f8faf5] max-w-[1440px] w-full mx-auto">
   <!-- Logo -->
-  <div class="flex items-center gap-3">
-    <img src="assets/buddies-logo.svg" alt="The Buddies Open logo" class="h-8 w-auto md:h-[73px] md:w-[235px]" loading="lazy" />
+  <div class="flex items-center gap-3 min-w-0 flex-shrink">
+    <img src="assets/buddies-logo.svg" alt="The Buddies Open logo"
+      class="h-6 max-w-[60px] navshrink:h-8 navshrink:max-w-[100px] md:h-[73px] md:max-w-[235px] transition-all duration-200"
+      loading="lazy" />
   </div>
   <!-- Hamburger for mobile -->
   <button id="mobile-menu-toggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10" aria-label="Open menu" aria-expanded="false">
@@ -24,18 +26,21 @@
     <span class="block w-6 h-0.5 bg-[#406c3a]"></span>
   </button>
   <!-- Nav links (hidden on mobile) -->
-  <ul class="hidden md:flex flex-1 justify-center gap-6 lg:gap-8 text-[#5a7a5a] text-base lg:text-lg xl:text-xl font-medium px-4 lg:px-6">
-    <li><a href="#about" class="hover:underline">About</a></li>
-    <li><a href="#event" class="hover:underline whitespace-nowrap">This Years Event</a></li>
-    <li><a href="#rules" class="hover:underline">Rules</a></li>
-    <li><a href="#champions" class="hover:underline">Champions</a></li>
-    <li><a href="#sponsors" class="hover:underline">Sponsors</a></li>
-    <li><a href="#gallery" class="hover:underline">Gallery</a></li>
-  </ul>
+  <div class="hidden md:flex flex-1 justify-center min-w-0">
+    <ul class="flex justify-center gap-4 lg:gap-8 text-[#5a7a5a] text-base navshrink:text-sm lg:text-lg xl:text-xl font-medium px-2 lg:px-6 min-w-0">
+      <li class="min-w-0"><a href="#about" class="hover:underline block max-w-full">About</a></li>
+      <li class="min-w-0"><a href="#event" class="hover:underline whitespace-nowrap block max-w-full">This Years Event</a></li>
+      <li class="min-w-0"><a href="#rules" class="hover:underline block max-w-full">Rules</a></li>
+      <li class="min-w-0"><a href="#champions" class="hover:underline block max-w-full">Champions</a></li>
+      <li class="min-w-0"><a href="#sponsors" class="hover:underline block max-w-full">Sponsors</a></li>
+      <li class="min-w-0"><a href="#gallery" class="hover:underline block max-w-full">Gallery</a></li>
+    </ul>
+  </div>
   <!-- Donate button -->
-  <a href="#donate" class="hidden md:flex bg-[#406c3a] text-white rounded-full px-6 py-2 items-center gap-2 font-medium shadow-md hover:bg-[#335c3a] transition min-w-[100px] justify-center">
+  <a href="#donate"
+    class="hidden md:flex bg-[#406c3a] text-white rounded-full px-4 py-2 items-center gap-2 font-medium shadow-md hover:bg-[#335c3a] transition min-w-0 flex-shrink min-w-[40px] navshrink:min-w-[40px] md:min-w-[100px] justify-center">
     <span class="w-3 h-3 bg-white rounded-full inline-block"></span>
-    DONATE
+    <span class="block max-w-full">DONATE</span>
   </a>
 </nav>
 <!-- Mobile menu (hidden by default, toggled by hamburger) -->
@@ -71,7 +76,7 @@
   </div>
 </section> 
 <section class="relative flex flex-col md:gap-2 py-10 md:py-16 px-2 lg:px-8 bg-white max-w-[1440px] mx-auto overflow-x-visible">
-  <div class="flex flex-col md:flex-row items-center md:items-center justify-center gap-12 w-full">
+  <div class="flex flex-col-reverse md:flex-row items-center md:items-center justify-center gap-12 w-full">
     <!-- Desktop: image+badge group -->
     <div class="relative w-full md:flex-1 md:min-w-[300px] md:max-w-[522px] h-auto md:h-[544px] flex flex-col items-center mb-8 md:mb-0" id="join-us-image-col">
       <!-- Mobile: golf-t image as background, badge as tag on bottom right -->
@@ -102,11 +107,16 @@
 // Only run on desktop
 // Removed JS that sets the height of the text column to allow natural text flow
 </script> 
-<section class="relative bg-[#f7f7f7] w-full max-w-[1440px] mx-auto flex flex-col items-center justify-center py-12 px-4">
-  <div class="flex flex-col items-center justify-center gap-[23px] w-full max-w-[913px] mx-auto">
-    <p class="text-[#617A43] font-bold uppercase text-[18px] leading-[23px] mb-0" style="font-family: 'Oxygen', sans-serif;">What we do</p>
-    <p class="text-[34px] leading-[60px] font-bold uppercase text-[#5C5C5C] max-w-[900px] mx-auto" style="font-family: 'Oxygen', sans-serif;">
-      ALL PROCEEDS ARE COLLECTED THROUGH THE <a href="#veritas" class="text-[#406c3a] no-underline font-bold" style="font-family: 'Oxygen', sans-serif;">VERITAS FOUNDATION</a> OUR GOAL IS TO BEAT LAST YEAR'S DONATION OF $15,000.00
+<section class="relative w-full max-w-[1440px] mx-auto flex flex-col items-center justify-center py-16 px-4" style="overflow:visible;">
+  <div class="absolute inset-0 pointer-events-none opacity-10" aria-hidden="true" style="overflow:visible;">
+    <svg width="100%" height="100%" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow:visible;">
+      <circle cx="720" cy="160" r="300" fill="#87A66F" />
+    </svg>
+  </div>
+  <div class="relative flex flex-col items-center justify-center gap-2 w-full max-w-[700px] mx-auto">
+    <span class="small-label mb-2">What we do</span>
+    <p class="text-body text-center text-[#5C5C5C]" style="font-family: var(--font-oxygen); font-size: 1.1rem;">
+      All proceeds are collected through the <a href="#veritas" class="text-[#406c3a] no-underline font-semibold" style="font-family: var(--font-oxygen);">VERITAS FOUNDATION</a>. Our goal is to beat last year's donation of $15,000.00.
     </p>
   </div>
 </section> 
@@ -135,7 +145,7 @@
         32 YEARS<br />OF<br />LEGENDARY<br />TRADITION
       </div>
       <!-- Image: staggered right -->
-      <img src="assets/speaker.jpeg" alt="Speaker at Buddies Open" class="w-full h-full object-cover object-[center_-20px] md:object-top rounded-xl ml-10 max-w-full" loading="lazy" />
+      <img src="assets/speaker.jpeg" alt="Speaker at Buddies Open" class="w-full h-full object-cover object-[center_-115px] md:object-top rounded-xl ml-10 max-w-full" loading="lazy" />
       <!-- Green Tag (Mobile) -->
       <span class="absolute bottom-2 left-2 bg-[#406c3a] text-white rounded-full px-6 py-2 text-sm font-bold shadow-md z-10 md:hidden">32 YEARS OF LEGENDARY TRADITION</span>
     </div>
@@ -188,73 +198,118 @@
 </section> 
 <section class="py-16 px-4 flex flex-col items-center bg-white max-w-[1440px] mx-auto">
   <h2 class="text-4xl md:text-5xl font-extrabold text-[#406c3a] text-center mb-8">PREVIOUS CHAMPIONS</h2>
-  <div class="w-full max-w-3xl mx-auto rounded-xl shadow-lg overflow-hidden mb-8 border-2 border-[#406c3a] bg-white">
-    <div class="px-6 py-3">
-      <div id="champions-list" class="px-6 py-6 text-[#444] text-lg max-h-96 overflow-y-auto rounded-xl">
-        <div class="mb-6">
-          <p class="font-bold text-xl mb-1">2024</p>
-          <ul class="mb-2">
-            <li><span class="font-semibold">Champions:</span> Anthony Di Iorio, Reno Di Salvo, Rocco Piccinino, Michael Piccinino</li>
-            <li><span class="font-semibold">Runners Up:</span> Michael Francella, Daniel Giancola, Paul La Monica, Charles Pal</li>
-            <li><span class="font-semibold">Closest to the Pin:</span> Barbara Hacking, Mark Avola</li>
-            <li><span class="font-semibold">Longest Drive:</span> Madeline Pallotta, Chris Ahn</li>
-            <li><span class="font-semibold">Best Dressed:</span> Brian Damianidis</li>
-            <li><span class="font-semibold">Putting Challenge:</span> 3-way tie: Rick Cybulski, Nate Fennema, Michael Ly</li>
-          </ul>
-          <p class="font-bold text-xl mb-1">2023</p>
-          <ul class="mb-2">
-            <li><span class="font-semibold">Champions:</span> Robert Anton, Larry Guy, Richard Goode, Braydon Evans</li>
-            <li><span class="font-semibold">Runners Up:</span> Fred Nanouris, Brian Conley, Jennifer Boudreau, Sean Farry</li>
-            <li><span class="font-semibold">Putting Challenge:</span> Zee Power</li>
-            <li><span class="font-semibold">Closest to the Pin:</span> Zee Power</li>
-            <li><span class="font-semibold">Longest Drive:</span> Michael Francella, Nancy Boyd</li>
-          </ul>
-          <p class="font-bold text-xl mb-1">2022</p>
-          <ul class="mb-2">
-            <li><span class="font-semibold">Champions:</span> Team Next Edge: Braydon Evans, Rich Goode, Larry Guy, Tom Jarmai</li>
-            <li><span class="font-semibold">Runners Up:</span> Team Mediterranean: Paolo LaMonica, Rudy Morrone, John Zinati, Michael Francella</li>
-            <li><span class="font-semibold">Closest to the Pin:</span> David LeClaire, Brooke McClelland</li>
-            <li><span class="font-semibold">Longest Drive:</span> Braydon Evans, Barbara Hacking</li>
-            <li><span class="font-semibold">Putting Challenge:</span> Tied – Mitch Sager, Warren Downs</li>
-          </ul>
-          <p class="font-bold text-xl mb-1">2021</p>
-          <ul class="mb-2">
-            <li><span class="font-semibold">Champions:</span> Team Palozzi (Nonno Ennio, Sons Michael, Lucas, and Nicholas)</li>
-            <li><span class="font-semibold">Runners Up:</span> Mark McLarney, Terry O'Brien, Bruce Cormier, Dan Dunn</li>
-            <li><span class="font-semibold">Closest to the Pin:</span> Steven Daily, Anthony Scilipoti</li>
-            <li><span class="font-semibold">Longest Drive:</span> Nancy Boyd</li>
-            <li><span class="font-semibold">Best Dressed:</span> Barbara Hacking and Nancy Boyd (both came dressed up in costume)</li>
-          </ul>
-          <p class="font-bold text-xl mb-1">2020</p>
-          <ul class="mb-2">
-            <li>Glenn Belcourt, Barb Hacking, Dan Della Rosa, Fred Nanouris</li>
-          </ul>
-          <p class="font-bold text-xl mb-1">2019</p>
-          <ul class="mb-2">
-            <li>Paul Greven, Andre Tilban Rios, Joe Younder, Michael Nitsos</li>
-          </ul>
-          <p class="font-bold text-xl mb-1">2018</p>
-          <ul class="mb-2">
-            <li>Kathleen Wong, Mike Coote, Robbie Coote (16)</li>
-          </ul>
-          <p class="font-bold text-xl mb-1">2017</p>
-          <ul class="mb-2">
-            <li>Barbara Hacking, Jeff Craig, Andrew Battalli (10)</li>
-          </ul>
-          <p class="font-bold text-xl mb-1">2016</p>
-          <ul class="mb-2">
-            <li>Christine Damianidis, Thang Le, Mason Damianidis</li>
-          </ul>
+  <div class="w-full max-w-3xl mx-auto">
+    <div class="rounded-xl shadow-lg overflow-hidden mb-8 border-2 border-[#406c3a] bg-white">
+      <!-- Year Selector Bar (Green, now inside card) -->
+      <nav id="year-selector" class="bg-[#406c3a] px-2 flex flex-wrap justify-center items-center gap-0" style="min-height:48px;">
+        <span class="year-link cursor-pointer px-4 py-2 text-white text-base md:text-lg font-semibold opacity-80" data-year="2024">2024</span>
+        <span class="year-link cursor-pointer px-4 py-2 text-white text-base md:text-lg font-semibold opacity-80" data-year="2023">2023</span>
+        <span class="year-link cursor-pointer px-4 py-2 text-white text-base md:text-lg font-semibold opacity-80" data-year="2022">2022</span>
+        <span class="year-link cursor-pointer px-4 py-2 text-white text-base md:text-lg font-semibold opacity-80" data-year="2021">2021</span>
+        <span class="year-link cursor-pointer px-4 py-2 text-white text-base md:text-lg font-semibold opacity-80" data-year="2020">2020</span>
+        <span class="year-link cursor-pointer px-4 py-2 text-white text-base md:text-lg font-semibold opacity-80" data-year="2019">2019</span>
+        <span class="year-link cursor-pointer px-4 py-2 text-white text-base md:text-lg font-semibold opacity-80" data-year="2018">2018</span>
+        <span class="year-link cursor-pointer px-4 py-2 text-white text-base md:text-lg font-semibold opacity-80" data-year="2017">2017</span>
+        <span class="year-link cursor-pointer px-4 py-2 text-white text-base md:text-lg font-semibold opacity-80" data-year="2016">2016</span>
+      </nav>
+      <div class="px-6 py-3">
+        <div id="champions-list" class="px-6 py-6 text-[#444] text-lg rounded-xl">
+          <!-- Year Winners Containers -->
+          <div class="mb-6 year-winners" data-year="2024">
+            <p class="font-bold text-xl mb-1">2024</p>
+            <ul class="mb-2">
+              <li><span class="font-semibold">Champions:</span> Anthony Di Iorio, Reno Di Salvo, Rocco Piccinino, Michael Piccinino</li>
+              <li><span class="font-semibold">Runners Up:</span> Michael Francella, Daniel Giancola, Paul La Monica, Charles Pal</li>
+              <li><span class="font-semibold">Closest to the Pin:</span> Barbara Hacking, Mark Avola</li>
+              <li><span class="font-semibold">Longest Drive:</span> Madeline Pallotta, Chris Ahn</li>
+              <li><span class="font-semibold">Best Dressed:</span> Brian Damianidis</li>
+              <li><span class="font-semibold">Putting Challenge:</span> 3-way tie: Rick Cybulski, Nate Fennema, Michael Ly</li>
+            </ul>
+          </div>
+          <div class="mb-6 year-winners hidden" data-year="2023">
+            <p class="font-bold text-xl mb-1">2023</p>
+            <ul class="mb-2">
+              <li><span class="font-semibold">Champions:</span> Robert Anton, Larry Guy, Richard Goode, Braydon Evans</li>
+              <li><span class="font-semibold">Runners Up:</span> Fred Nanouris, Brian Conley, Jennifer Boudreau, Sean Farry</li>
+              <li><span class="font-semibold">Putting Challenge:</span> Zee Power</li>
+              <li><span class="font-semibold">Closest to the Pin:</span> Zee Power</li>
+              <li><span class="font-semibold">Longest Drive:</span> Michael Francella, Nancy Boyd</li>
+            </ul>
+          </div>
+          <div class="mb-6 year-winners hidden" data-year="2022">
+            <p class="font-bold text-xl mb-1">2022</p>
+            <ul class="mb-2">
+              <li><span class="font-semibold">Champions:</span> Team Next Edge: Braydon Evans, Rich Goode, Larry Guy, Tom Jarmai</li>
+              <li><span class="font-semibold">Runners Up:</span> Team Mediterranean: Paolo LaMonica, Rudy Morrone, John Zinati, Michael Francella</li>
+              <li><span class="font-semibold">Closest to the Pin:</span> David LeClaire, Brooke McClelland</li>
+              <li><span class="font-semibold">Longest Drive:</span> Braydon Evans, Barbara Hacking</li>
+              <li><span class="font-semibold">Putting Challenge:</span> Tied – Mitch Sager, Warren Downs</li>
+            </ul>
+          </div>
+          <div class="mb-6 year-winners hidden" data-year="2021">
+            <p class="font-bold text-xl mb-1">2021</p>
+            <ul class="mb-2">
+              <li><span class="font-semibold">Champions:</span> Team Palozzi (Nonno Ennio, Sons Michael, Lucas, and Nicholas)</li>
+              <li><span class="font-semibold">Runners Up:</span> Mark McLarney, Terry O'Brien, Bruce Cormier, Dan Dunn</li>
+              <li><span class="font-semibold">Closest to the Pin:</span> Steven Daily, Anthony Scilipoti</li>
+              <li><span class="font-semibold">Longest Drive:</span> Nancy Boyd</li>
+              <li><span class="font-semibold">Best Dressed:</span> Barbara Hacking and Nancy Boyd (both came dressed up in costume)</li>
+            </ul>
+          </div>
+          <div class="mb-6 year-winners hidden" data-year="2020">
+            <p class="font-bold text-xl mb-1">2020</p>
+            <ul class="mb-2">
+              <li>Glenn Belcourt, Barb Hacking, Dan Della Rosa, Fred Nanouris</li>
+            </ul>
+          </div>
+          <div class="mb-6 year-winners hidden" data-year="2019">
+            <p class="font-bold text-xl mb-1">2019</p>
+            <ul class="mb-2">
+              <li>Paul Greven, Andre Tilban Rios, Joe Younder, Michael Nitsos</li>
+            </ul>
+          </div>
+          <div class="mb-6 year-winners hidden" data-year="2018">
+            <p class="font-bold text-xl mb-1">2018</p>
+            <ul class="mb-2">
+              <li>Kathleen Wong, Mike Coote, Robbie Coote (16)</li>
+            </ul>
+          </div>
+          <div class="mb-6 year-winners hidden" data-year="2017">
+            <p class="font-bold text-xl mb-1">2017</p>
+            <ul class="mb-2">
+              <li>Barbara Hacking, Jeff Craig, Andrew Battalli (10)</li>
+            </ul>
+          </div>
+          <div class="mb-6 year-winners hidden" data-year="2016">
+            <p class="font-bold text-xl mb-1">2016</p>
+            <ul class="mb-2">
+              <li>Christine Damianidis, Thang Le, Mason Damianidis</li>
+            </ul>
+          </div>
+          <!-- End Year Winners Containers -->
         </div>
       </div>
-    </div>
-    <div class="flex justify-end px-6 pb-4">
-      <a href="/champions-full.html" class="bg-[#406c3a] text-white rounded-full px-6 py-2 font-semibold shadow hover:bg-[#335c3a] transition">See all</a>
+      <div class="flex justify-end px-6 pb-4">
+        <a href="/champions-full.html" class="bg-[#406c3a] text-white rounded-full px-6 py-2 font-semibold shadow hover:bg-[#335c3a] transition">See all</a>
+      </div>
     </div>
   </div>
   <h2 class="text-3xl md:text-4xl font-extrabold text-[#406c3a] text-center mb-2">OUR SPECIAL CHAMPION</h2>
   <p class="text-[#888] text-center mb-6">From our young buddy who went to Cancer Camp.</p>
   <img src="assets/special-champ.jpeg" alt="Special Champion artwork" class="mx-auto rounded-xl max-w-md w-full h-auto shadow-lg mb-4" loading="lazy" />
+  <style>
+    /* Highlight selected year in the green bar */
+    #year-selector .selected-year {
+      opacity: 1 !important;
+      font-weight: 900;
+      color: #fff !important;
+      text-decoration: none !important;
+    }
+    #year-selector .year-link:hover {
+      opacity: 1;
+      text-decoration: none;
+    }
+  </style>
 </section> 
 <section class="py-16 px-4 bg-[#f7f7f7] max-w-[1440px] mx-auto">
   <h2 class="text-4xl md:text-5xl font-extrabold text-[#406c3a] text-center mb-16">SPONSORS</h2>
@@ -262,26 +317,26 @@
     <!-- Veritas -->
     <div class="flex flex-col items-center text-center">
       <img src="assets/veritas-logo.png" alt="Veritas Investment Research logo" class="h-16 md:h-20 mb-4 mx-auto" loading="lazy" />
-      <h3 class="text-2xl font-bold text-[#7c2d3a] mb-2">VERITAS <span class="font-normal text-[#b76b6b]">Investment Research</span></h3>
+      <h3 class="text-2xl font-bold text-[#406c3a] mb-2">VERITAS <span class="font-normal text-[#406c3a]">Investment Research</span></h3>
       <p class="text-[#444] mb-2">Veritas provides completely independent equity research. Our analysis and conclusions are based on an organization's fundamentals and business outlook. We don't make exaggerated price predictions or issue cheerleading reports. Instead, we realize that there are far too many variables affecting stock prices to peg their future values. While we may miss out on temporary price momentum, our philosophy is that over the longer-term there are certain investments that should be made and others that should be avoided.<br><a href="https://www.veritascorp.com" class="underline text-[#406c3a]" target="_blank">www.veritascorp.com</a></p>
-    </div>
-    <!-- Teeza -->
-    <div class="flex flex-col items-center text-center">
-      <img src="assets/teeza-logo.png" alt="Teeza logo" class="h-16 md:h-20 mb-4 mx-auto" loading="lazy" />
-      <h3 class="text-2xl font-bold text-[#222] mb-2">TEEZA</h3>
-      <p class="text-[#444] mb-2">Our mission is your marketing. We specialize in event promotion, custom clothing and employee incentives. No job is too big or too small. Quality, reliability, pride–TEEZA.<br><a href="https://www.goteeza.com" class="underline text-[#406c3a]" target="_blank">www.goteeza.com</a></p>
-    </div>
-    <!-- Balanced+ -->
-    <div class="flex flex-col items-center text-center">
-      <img src="assets/balanced-logo.png" alt="Balanced+ logo" class="h-16 md:h-20 mb-4 mx-auto" loading="lazy" />
-      <h3 class="text-2xl font-bold text-[#222] mb-2">BALANCED+</h3>
-      <p class="text-[#444] mb-2">For over 25 years, BALANCED+ has been a Maximizer CRM and Microsoft Dynamics 365 certified solution provider. We specialize in providing CRM and other Information System solutions tailored to your business.<br>Our IT engineering services can handle your ever growing business needs. We are a boutique IT consulting firm that you will enjoy working with!<br><a href="https://www.balanced.plus" class="underline text-[#406c3a]" target="_blank">www.balanced.plus</a></p>
     </div>
     <!-- Babysoft -->
     <div class="flex flex-col items-center text-center">
       <img src="assets/babysoft-logo.png" alt="Babysoft logo" class="h-16 md:h-20 mb-4 mx-auto" loading="lazy" />
-      <h3 class="text-2xl font-bold text-[#222] mb-2">BABYSOFT</h3>
+      <h3 class="text-2xl font-bold text-[#406c3a] mb-2">BABYSOFT</h3>
       <p class="text-[#444] mb-2">Babysoft since 2005, is a 100% Canadian owned telecom service provider licensed by Canadian Radio–television and Telecommunications Commission (CRTC). We have been serving the Canadian small to medium size businesses for more than 10 years, specialized in design and develop unified business and telecommunication applications. The philosophy of Babysoft is very simple: Provide simple and high quality services and solutions to our customers. We believe by having the right customers with the right technologies, it will greatly improve the productivity of their business, reduce costs, and help them to grow. We understand in order to make us success, we need to make our customers success, and this is the primary principal of Babysoft.<br><a href="https://www.babysoft.ca" class="underline text-[#406c3a]" target="_blank">www.babysoft.ca</a></p>
+    </div>
+    <!-- Balanced+ -->
+    <div class="flex flex-col items-center text-center">
+      <img src="assets/balanced-logo.png" alt="Balanced+ logo" class="max-h-16 md:max-h-20 w-auto mb-4 mx-auto object-contain" loading="lazy" />
+      <h3 class="text-2xl font-bold text-[#406c3a] mb-2">BALANCED+</h3>
+      <p class="text-[#444] mb-2">For over 25 years, BALANCED+ has been a Maximizer CRM and Microsoft Dynamics 365 certified solution provider. We specialize in providing CRM and other Information System solutions tailored to your business.<br>Our IT engineering services can handle your ever growing business needs. We are a boutique IT consulting firm that you will enjoy working with!<br><a href="https://www.balanced.plus" class="underline text-[#406c3a]" target="_blank">www.balanced.plus</a></p>
+    </div>
+    <!-- Teeza -->
+    <div class="flex flex-col items-center text-center">
+      <img src="assets/teeza-logo.png" alt="Teeza logo" class="h-32 md:h-40 mb-4 mx-auto" loading="lazy" />
+      <h3 class="text-2xl font-bold text-[#406c3a] mb-2">TEEZA</h3>
+      <p class="text-[#444] mb-2">Our mission is your marketing. We specialize in event promotion, custom clothing and employee incentives. No job is too big or too small. Quality, reliability, pride–TEEZA.<br><a href="https://www.goteeza.com" class="underline text-[#406c3a]" target="_blank">www.goteeza.com</a></p>
     </div>
   </div>
 </section> 
@@ -292,7 +347,7 @@
     <div class="hidden md:block flex-1 h-px bg-gradient-to-l from-sky-400 via-green-500 to-orange-500 max-w-[40%]" aria-hidden="true"></div>
   </div>
   <div class="max-w-[1172px] mx-auto px-2 md:px-8">
-    <div class="flex flex-nowrap justify-center items-center gap-x-4">
+    <div class="grid grid-cols-5 grid-rows-2 gap-4 md:grid-cols-10 md:grid-rows-1 justify-center items-center justify-items-center mx-auto w-max">
       <img src="assets/trusted-1.png" alt="Partner 1" class="h-8 md:h-10 lg:h-12 w-auto object-contain bg-white rounded shadow-sm flex-1 min-w-0" loading="lazy" />
       <img src="assets/trusted-2.png" alt="Partner 2" class="h-8 md:h-10 lg:h-12 w-auto object-contain bg-white rounded shadow-sm flex-1 min-w-0" loading="lazy" />
       <img src="assets/trusted-3.png" alt="Partner 3" class="h-8 md:h-10 lg:h-12 w-auto object-contain bg-white rounded shadow-sm flex-1 min-w-0" loading="lazy" />
@@ -309,7 +364,7 @@
 <section class="w-full py-16 bg-[#f7f7f7] max-w-[1440px] mx-auto">
   <div class="text-center mb-2">
     <h2 class="text-5xl font-extrabold text-[#406c3a] mb-2">GALLERY</h2>
-    <div class="text-3xl font-bold text-[#7a956b] tracking-wider mb-8">2034</div>
+    <div class="text-3xl font-bold text-[#7a956b] tracking-wider mb-8">2024</div>
   </div>
   <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-6 px-2 md:px-6">
     <!-- Main large image with overlay button -->
@@ -391,7 +446,7 @@
       <!-- Follow Us -->
       <div>
         <h3 class="text-2xl font-bold mb-4">FOLLOW US</h3>
-        <div class="flex gap-x-10 mt-2">
+        <div class="flex flex-wrap gap-x-4 gap-y-2 mt-2">
           <!-- Twitter (Font Awesome) -->
           <a href="#" class="text-[#406c3a] hover:text-[#1da1f2] flex items-center justify-center" aria-label="Twitter">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-8 h-8 object-contain inline-block text-[#406c3a]" fill="currentColor"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
@@ -500,10 +555,6 @@
     <!-- Love Hands SVG bottom right -->
     <div class="relative min-h-[200px]">
       <img src="assets/love-hands.svg" alt="Love hands" class="absolute right-0 bottom-0 w-[180px] md:w-[220px] opacity-60 pointer-events-none select-none" loading="lazy" />
-    </div>
-  </div>
-</footer> 
-      </div>
     </div>
   </div>
 </footer> 
