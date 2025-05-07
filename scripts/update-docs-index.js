@@ -49,4 +49,10 @@ const after = indexHtml.slice(endIdx);
 const newHtml = before + '\n' + sectionsContent + after;
 
 fs.writeFileSync(docsIndexPath, newHtml, 'utf8');
-console.log('docs/index.html updated with latest sections.'); 
+
+// Post-process: update all asset references to use 'buddies-html/assets/'
+let finalHtml = fs.readFileSync(docsIndexPath, 'utf8')
+  .replace(/(["'(])assets\//g, '$1buddies-html/assets/');
+fs.writeFileSync(docsIndexPath, finalHtml, 'utf8');
+
+console.log('docs/index.html updated with latest sections and asset references.'); 
