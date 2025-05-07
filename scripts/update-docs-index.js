@@ -50,9 +50,12 @@ const newHtml = before + '\n' + sectionsContent + after;
 
 fs.writeFileSync(docsIndexPath, newHtml, 'utf8');
 
-// Post-process: update all asset references to use 'buddies-html/assets/'
+// Post-process: ensure all asset references use 'assets/' (no leading slash, no 'buddies-html/' prefix)
 let finalHtml = fs.readFileSync(docsIndexPath, 'utf8')
-  .replace(/(["'(])assets\//g, '$1buddies-html/assets/');
+  // Replace any src="buddies-html/assets/ or href="buddies-html/assets/ or url('buddies-html/assets/ or url("buddies-html/assets/
+  .replace(/(["'(])buddies-html\/assets\//g, '$1assets/')
+  // Also fix any accidental double slashes
+  .replace(/assets\/\/+/g, 'assets/');
 fs.writeFileSync(docsIndexPath, finalHtml, 'utf8');
 
 console.log('docs/index.html updated with latest sections and asset references.'); 
