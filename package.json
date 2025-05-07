@@ -19,7 +19,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "vite",
+    "dev": "npx serve .",
     "build": "vite build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -31,6 +31,7 @@
     "@playwright/test": "^1.52.0",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
+    "serve": "^14.2.4",
     "tailwindcss": "^4.1.5"
   }
 }
