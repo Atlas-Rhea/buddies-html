@@ -1,0 +1,38 @@
+<nav class="flex items-center justify-between px-4 py-3 bg-[#f8faf5] max-w-[1440px] mx-auto">
+  <!-- Logo -->
+  <div class="flex items-center gap-3">
+    <img src="assets/buddies-logo.svg" alt="The Buddies Open logo" class="h-8 w-auto md:h-[73px] md:w-[235px]" loading="lazy" />
+  </div>
+  <!-- Hamburger for mobile -->
+  <button id="mobile-menu-toggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10" aria-label="Open menu" aria-expanded="false">
+    <span class="block w-6 h-0.5 bg-[#406c3a] mb-1"></span>
+    <span class="block w-6 h-0.5 bg-[#406c3a] mb-1"></span>
+    <span class="block w-6 h-0.5 bg-[#406c3a]"></span>
+  </button>
+  <!-- Nav links (hidden on mobile) -->
+  <ul class="hidden md:flex flex-1 justify-center gap-6 lg:gap-8 text-[#5a7a5a] text-base lg:text-lg xl:text-xl font-medium px-4 lg:px-6">
+    <li><a href="#about" class="hover:underline">About</a></li>
+    <li><a href="#event" class="hover:underline whitespace-nowrap">This Years Event</a></li>
+    <li><a href="#rules" class="hover:underline">Rules</a></li>
+    <li><a href="#champions" class="hover:underline">Champions</a></li>
+    <li><a href="#sponsors" class="hover:underline">Sponsors</a></li>
+    <li><a href="#gallery" class="hover:underline">Gallery</a></li>
+  </ul>
+  <!-- Donate button -->
+  <a href="#donate" class="hidden md:flex bg-[#406c3a] text-white rounded-full px-6 py-2 items-center gap-2 font-medium shadow-md hover:bg-[#335c3a] transition min-w-[100px] justify-center">
+    <span class="w-3 h-3 bg-white rounded-full inline-block"></span>
+    DONATE
+  </a>
+</nav>
+<!-- Mobile menu (hidden by default, toggled by hamburger) -->
+<div id="mobile-menu" class="md:hidden px-4 pb-2 hidden">
+  <ul class="flex flex-col gap-2 text-[#406c3a] text-base font-medium bg-white rounded-lg shadow-md p-4">
+    <li><a href="#about" class="block py-2 px-2 rounded hover:bg-[#f8faf5]">About</a></li>
+    <li><a href="#event" class="block py-2 px-2 rounded hover:bg-[#f8faf5]">This Years Event</a></li>
+    <li><a href="#rules" class="block py-2 px-2 rounded hover:bg-[#f8faf5]">Rules</a></li>
+    <li><a href="#champions" class="block py-2 px-2 rounded hover:bg-[#f8faf5]">Champions</a></li>
+    <li><a href="#sponsors" class="block py-2 px-2 rounded hover:bg-[#f8faf5]">Sponsors</a></li>
+    <li><a href="#gallery" class="block py-2 px-2 rounded hover:bg-[#f8faf5]">Gallery</a></li>
+    <li><a href="#donate" class="block py-2 px-2 rounded bg-[#406c3a] text-white font-semibold mt-2">DONATE</a></li>
+  </ul>
+</div> 
