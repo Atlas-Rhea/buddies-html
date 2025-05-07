@@ -1,0 +1,73 @@
+{
+  "Climb": "xK4p",
+  "moves": [
+    {
+      "status": "todo",
+      "description": "Set up Playwright MCP for mobile visual regression and functional testing.",
+      "details": "Configure Playwright MCP to run tests at 320px, 375px, 414px, and 480px widths."
+    },
+    {
+      "status": "todo",
+      "description": "Test and iterate on nav-bar section for pixel-perfect and functional alignment.",
+      "details": "Compare src/sections/nav-bar.html to ref-png/nav-bar.png at all breakpoints. Fix any issues found."
+    },
+    {
+      "status": "todo",
+      "description": "Test and iterate on hero section for pixel-perfect and functional alignment.",
+      "details": "Compare src/sections/hero.html to ref-png/hero.png at all breakpoints. Fix any issues found."
+    },
+    {
+      "status": "todo",
+      "description": "Test and iterate on about-us section for pixel-perfect and functional alignment.",
+      "details": "Compare src/sections/about-us.html to ref-png/about-us.png at all breakpoints. Fix any issues found."
+    },
+    {
+      "status": "todo",
+      "description": "Test and iterate on what-we-do section for pixel-perfect and functional alignment.",
+      "details": "Compare src/sections/what-we-do.html to ref-png/what-we-do.png at all breakpoints. Fix any issues found.",
+      "rest": true
+    },
+    {
+      "status": "todo",
+      "description": "Test and iterate on join-us section for pixel-perfect and functional alignment.",
+      "details": "Compare src/sections/join-us.html to ref-png/join-us.png at all breakpoints. Fix any issues found."
+    },
+    {
+      "status": "todo",
+      "description": "Test and iterate on rules section for pixel-perfect and functional alignment.",
+      "details": "Compare src/sections/rules.html to ref-png/rules.png at all breakpoints. Fix any issues found."
+    },
+    {
+      "status": "todo",
+      "description": "Test and iterate on champions section for pixel-perfect and functional alignment.",
+      "details": "Compare src/sections/champions.html to ref-png/champions.png at all breakpoints. Fix any issues found."
+    },
+    {
+      "status": "todo",
+      "description": "Test and iterate on sponsors section for pixel-perfect and functional alignment.",
+      "details": "Compare src/sections/sponsors.html to ref-png/sponsors.png at all breakpoints. Fix any issues found."
+    },
+    {
+      "status": "todo",
+      "description": "Test and iterate on trusted section for pixel-perfect and functional alignment.",
+      "details": "Compare src/sections/trusted.html to ref-png/trusted.png at all breakpoints. Fix any issues found."
+    },
+    {
+      "status": "todo",
+      "description": "Test and iterate on gallery section for pixel-perfect and functional alignment.",
+      "details": "Compare src/sections/gallery.html to ref-png/Gallery.png at all breakpoints. Fix any issues found.",
+      "rest": true
+    },
+    {
+      "status": "todo",
+      "description": "Test and iterate on footer section for pixel-perfect and functional alignment.",
+      "details": "Compare src/sections/footer.html to ref-png/footer.png at all breakpoints. Fix any issues found."
+    },
+    {
+      "status": "todo",
+      "description": "Final full-site review and polish.",
+      "details": "Run Playwright MCP across the entire site at all breakpoints. Ensure logical flow, aesthetics, and no regressions. Present for user review.",
+      "rest": true
+    }
+  ]
+} 

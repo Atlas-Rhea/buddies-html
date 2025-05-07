@@ -1,0 +1,57 @@
+{
+  "Climb": "02b7",
+  "moves": [
+    {
+      "status": "todo",
+      "description": "Scaffold the project repo and install all dependencies (Node 20+, Vite, Tailwind, PostCSS, Prettier, Stylelint, axe-core, Framelink, NCP, @squoosh/cli)",
+      "details": "Set up the initial project structure and ensure all required tools and packages are installed."
+    },
+    {
+      "status": "todo",
+      "description": "Configure Tailwind, PostCSS, Prettier, and Stylelint",
+      "details": "Add and configure tailwind.config.js, postcss.config.js, Prettier, and Stylelint for the project."
+    },
+    {
+      "status": "todo",
+      "description": "Set up Vite dev server and basic index.html with live reload",
+      "details": "Create a minimal index.html and ensure Vite dev server runs with hot reload."
+    },
+    {
+      "status": "todo",
+      "description": "Implement interactive section capture flow",
+      "details": "Prompt user to upload section screenshots and names, one at a time, storing them for conversion.",
+      "rest": true
+    },
+    {
+      "status": "todo",
+      "description": "Automate export of each section screenshot to responsive HTML partial styled with Tailwind",
+      "details": "Convert each uploaded image to a partial in src/sections/<slug>.html."
+    },
+    {
+      "status": "todo",
+      "description": "Extract and optimize image assets, reference with lazy-loaded img tags",
+      "details": "Save sliced images to src/assets/ and use loading=\"lazy\" in markup."
+    },
+    {
+      "status": "todo",
+      "description": "Assemble all partials into index.html for live preview and allow reordering",
+      "details": "Ensure index.html includes all section partials and can be reordered by editing the include list.",
+      "rest": true
+    },
+    {
+      "status": "todo",
+      "description": "Run accessibility (axe-core) and performance (Lighthouse) checks",
+      "details": "Generate /reports/ for each build and ensure all metrics are met."
+    },
+    {
+      "status": "skip",
+      "description": "Write tests",
+      "details": "Add automated tests for section conversion and accessibility if time allows."
+    },
+    {
+      "status": "todo",
+      "description": "Prepare README and hand-off for review",
+      "details": "Document setup, build, and QA instructions."
+    }
+  ]
+} 
