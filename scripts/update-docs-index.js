@@ -59,8 +59,8 @@ let finalHtml = fs.readFileSync(docsIndexPath, 'utf8')
   // Remove any accidental double slashes
   .replace(/assets\/\/+/, 'assets/');
 
-// Inject script tags for loadSections.js and main.js before </body>
-const scriptTags = '\n    <script src="loadSections.js"></script>\n    <script src="main.js"></script>\n';
+// Inject script tag for main.js before </body>
+const scriptTags = '\n    <script src="main.js"></script>\n';
 finalHtml = finalHtml.replace(/<\/body>/i, scriptTags + '</body>');
 
 fs.writeFileSync(docsIndexPath, finalHtml, 'utf8');
