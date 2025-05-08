@@ -1,26 +1,24 @@
-<section class="w-full py-16 bg-[#f7f7f7] max-w-[1440px] mx-auto">
-  <div class="text-center mb-2">
-    <h2 class="text-5xl font-extrabold text-[#406c3a] mb-2">GALLERY</h2>
-    <div class="text-3xl font-bold text-[#7a956b] tracking-wider mb-8">2024</div>
-  </div>
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-6 px-2 md:px-6">
-    <!-- Main large image with overlay button -->
-    <div class="relative flex-1 min-w-0 aspect-[4/3] md:aspect-auto md:h-[420px] lg:h-[485px] rounded-xl overflow-hidden shadow-md">
-      <img src="assets/gallery-1.png" alt="Gallery main" class="w-full h-full object-cover" loading="lazy" />
-      <a href="/gallery" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 group focus:outline-none" tabindex="0" aria-label="View all gallery photos">
-        <span class="block w-[90px] h-[90px] md:w-[102px] md:h-[101px] rounded-full bg-white/80 shadow-lg flex items-center justify-center transition group-hover:scale-105 group-active:scale-95 border-2 border-white">
-          <img src="assets/view-all.svg" alt="View all" class="w-16 h-16 md:w-[70px] md:h-[70px]" draggable="false" />
-        </span>
-      </a>
-    </div>
-    <!-- Right grid -->
-    <div class="flex-1 min-w-0 grid grid-cols-3 grid-rows-2 gap-3 md:gap-4 h-[420px] lg:h-[485px]">
-      <img src="assets/gallery-2.png" alt="Gallery 2" class="w-full h-full object-cover rounded-xl shadow-md" loading="lazy" />
-      <img src="assets/gallery-3.png" alt="Gallery 3" class="w-full h-full object-cover rounded-xl shadow-md" loading="lazy" />
-      <img src="assets/gallery-4.png" alt="Gallery 4" class="w-full h-full object-cover rounded-xl shadow-md" loading="lazy" />
-      <img src="assets/gallery-5.png" alt="Gallery 5" class="w-full h-full object-cover rounded-xl shadow-md" loading="lazy" />
-      <img src="assets/gallery-6.png" alt="Gallery 6" class="w-full h-full object-cover rounded-xl shadow-md" loading="lazy" />
-      <img src="assets/gallery-7.png" alt="Gallery 7" class="w-full h-full object-cover rounded-xl shadow-md" loading="lazy" />
-    </div>
+<section class="gallery">
+  <h2 class="gallery__title">GALLERY</h2>
+  <p class="gallery__year">2024</p>
+
+  <div class="gallery__grid">
+    <!-- Hero: spans both columns -->
+    <figure class="gallery__item gallery__item--hero">
+      <img src="assets/gallery-1.jpg" alt="Main gallery image" loading="lazy">
+      <a href="/gallery" class="gallery__cta gallery__cta--overlay">VIEW ALL</a>
+    </figure>
+    <!-- Row 2: VIEW ALL (left), Gallery 4 (right) -->
+    <figure class="gallery__item gallery__item--cta">
+      <a href="/gallery" class="gallery__cta gallery__cta--tile">VIEW ALL</a>
+    </figure>
+    <figure class="gallery__item"><img src="assets/gallery-4.png" alt="Gallery 4"></figure>
+    <!-- Row 3: Gallery 2 (left), Gallery 3 (right) -->
+    <figure class="gallery__item"><img src="assets/gallery-2.png" alt="Gallery 2"></figure>
+    <figure class="gallery__item"><img src="assets/gallery-3.png" alt="Gallery 3"></figure>
+    <!-- The rest (show only ≥ 640 px) -->
+    <figure class="gallery__item hide-mobile"><img src="assets/gallery-5.png" alt="Gallery 5"></figure>
+    <figure class="gallery__item hide-mobile"><img src="assets/gallery-6.png" alt="Gallery 6"></figure>
+    <figure class="gallery__item hide-mobile"><img src="assets/gallery-7.png" alt="Gallery 7"></figure>
   </div>
 </section> 

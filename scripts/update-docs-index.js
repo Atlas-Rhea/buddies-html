@@ -57,7 +57,12 @@ let finalHtml = fs.readFileSync(docsIndexPath, 'utf8')
   // Replace any src="/assets/ or href="/assets/ or url('/assets/ or url("/assets/
   .replace(/(["'(])\/assets\//g, '$1assets/')
   // Remove any accidental double slashes
-  .replace(/assets\/\/+/g, 'assets/');
+  .replace(/assets\/\/+/, 'assets/');
+
+// Inject script tags for loadSections.js and main.js before </body>
+const scriptTags = '\n    <script src="loadSections.js"></script>\n    <script src="main.js"></script>\n';
+finalHtml = finalHtml.replace(/<\/body>/i, scriptTags + '</body>');
+
 fs.writeFileSync(docsIndexPath, finalHtml, 'utf8');
 
-console.log('docs/index.html updated with latest sections and asset references.'); 
+console.log('docs/index.html updated with latest sections, asset references, and script tags.'); 
