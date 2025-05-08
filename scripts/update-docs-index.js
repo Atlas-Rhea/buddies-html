@@ -17,7 +17,21 @@ const sectionOrder = [
 ];
 
 const sectionsDir = path.join(__dirname, '../src/sections');
-const docsIndexPath = path.join(__dirname, '../docs/index.html');
+const docsDir = path.join(__dirname, '../docs');
+const docsIndexPath = path.join(docsDir, 'index.html');
+
+// Ensure docs directory exists
+if (!fs.existsSync(docsDir)) {
+  fs.mkdirSync(docsDir, { recursive: true });
+}
+
+// If docs/index.html does not exist, create it with a minimal template
+if (!fs.existsSync(docsIndexPath)) {
+  fs.writeFileSync(
+    docsIndexPath,
+    `<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8" />\n  <meta name="viewport" content="width=device-width, initial-scale=1.0" />\n  <title>Buddies Open HTML Prototype</title>\n  <link rel="stylesheet" href="assets/index.css">\n</head>\n<body>\n  <div id="app">\n    <div id="sections">\n      <!-- SECTIONS_START -->\n      <!-- SECTIONS_END -->\n    </div>\n  </div>\n</body>\n</html>\n`
+  );
+}
 
 // Read and concatenate all section files
 let sectionsContent = '';
@@ -59,7 +73,7 @@ let finalHtml = fs.readFileSync(docsIndexPath, 'utf8')
   // Remove any accidental double slashes
   .replace(/assets\/\/+/, 'assets/');
 
-// Inject script tag for main.js before </body>
+// Only inject main.js, do not inject loadSections.js
 const scriptTags = '\n    <script src="main.js"></script>\n';
 finalHtml = finalHtml.replace(/<\/body>/i, scriptTags + '</body>');
 
