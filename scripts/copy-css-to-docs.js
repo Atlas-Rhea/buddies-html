@@ -4,9 +4,9 @@ const path = require('path');
 const distAssetsDir = path.join(__dirname, '../dist/assets');
 const docsAssetsDir = path.join(__dirname, '../docs/assets');
 
-// Find the built CSS file (index-*.css)
+// Find the built CSS file (index.css)
 const files = fs.readdirSync(distAssetsDir);
-const cssFile = files.find(f => /^index-.*\.css$/.test(f));
+const cssFile = files.find(f => f === 'index.css');
 
 if (!cssFile) {
   console.error('No built CSS file found in dist/assets');

@@ -21,8 +21,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "node scripts/update-docs-index.js && npm run copy-css-to-docs && cmd /c \"copy src\\main.js docs\\main.js\"",
-    "copy-css-to-docs": "node scripts/copy-css-to-docs.js",
+    "postbuild": "cmd /c \"xcopy dist docs /E /I /Y\"",
     "update-docs-index": "node scripts/update-docs-index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
