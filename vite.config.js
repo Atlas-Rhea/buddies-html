@@ -47,6 +47,7 @@ function injectSectionsPlugin() {
 }
 
 export default defineConfig({
+  base: '/buddies-html/',
   build: {
     rollupOptions: {
       // Use default output options so Vite will hash CSS and JS filenames
