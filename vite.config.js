@@ -46,12 +46,12 @@ function injectSectionsPlugin() {
   };
 }
 
-export default defineConfig({
-  base: '/buddies-html/',
+export default defineConfig(({ mode }) => ({
+  base: mode === 'production' ? '/buddies-html/' : '/',
   build: {
     rollupOptions: {
       // Use default output options so Vite will hash CSS and JS filenames
     },
   },
   plugins: [injectSectionsPlugin()],
-}); 
+})); 

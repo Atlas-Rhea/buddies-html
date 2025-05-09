@@ -340,6 +340,12 @@ p,
     object-position: center;
     display: block;
   }
+  .small-label {
+    font-size: 1.75rem;
+  }
+  section.what-we-do-section, section.what-we-do-section * {
+    font-size: 1.2em !important;
+  }
 }
 
 /* Footer form */
