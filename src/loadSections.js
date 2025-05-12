@@ -57,4 +57,12 @@ Promise.all(
       toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
   }
+
+  // --- Ensure hero height and scroll margin logic runs after sections are loaded ---
+  if (typeof window.setHeroHeight === 'function') window.setHeroHeight();
+  if (typeof window.setScrollMarginTop === 'function') window.setScrollMarginTop();
+  window.addEventListener('resize', () => {
+    if (typeof window.setHeroHeight === 'function') window.setHeroHeight();
+    if (typeof window.setScrollMarginTop === 'function') window.setScrollMarginTop();
+  });
 }); 

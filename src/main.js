@@ -24,3 +24,26 @@ if (document.getElementById('year-selector')) {
   // Show the latest year by default
   if (yearLinks.length > 0) yearLinks[0].click();
 } 
+
+// --- Hero Section Full Viewport Height Minus Nav Bar ---
+function setHeroHeight() {
+  const nav = document.querySelector('nav');
+  const hero = document.querySelector('section'); // Assumes hero is the first section
+  if (nav && hero) {
+    const navHeight = nav.offsetHeight;
+    hero.style.minHeight = `calc(100vh - ${navHeight}px)`;
+  }
+}
+window.setHeroHeight = setHeroHeight;
+
+// --- Smooth Scroll Offset for Anchors (scroll-margin-top) ---
+function setScrollMarginTop() {
+  const nav = document.querySelector('nav');
+  if (!nav) return;
+  const navHeight = nav.offsetHeight;
+  // All sections with an id (anchors)
+  document.querySelectorAll('section[id], div[id]').forEach(el => {
+    el.style.scrollMarginTop = navHeight + 'px';
+  });
+}
+window.setScrollMarginTop = setScrollMarginTop; 
