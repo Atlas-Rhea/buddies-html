@@ -586,3 +586,7 @@ section.gallery-section {
     display: block;
   }
 }
+
+html, body {
+  scroll-behavior: smooth;
+}
