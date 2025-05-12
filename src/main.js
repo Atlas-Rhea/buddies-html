@@ -32,6 +32,7 @@ function setHeroHeight() {
   if (nav && hero) {
     const navHeight = nav.offsetHeight;
     hero.style.minHeight = `calc(100vh - ${navHeight}px)`;
+    hero.style.paddingTop = navHeight + 'px'; // Ensure overlay starts below nav bar
   }
 }
 window.setHeroHeight = setHeroHeight;
