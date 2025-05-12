@@ -46,4 +46,13 @@ function setScrollMarginTop() {
     el.style.scrollMarginTop = navHeight + 'px';
   });
 }
-window.setScrollMarginTop = setScrollMarginTop; 
+window.setScrollMarginTop = setScrollMarginTop;
+
+// Ensure hero height and scroll margin logic runs on page load and resize (for production)
+if (typeof window.setHeroHeight === 'function') window.setHeroHeight();
+if (typeof window.setScrollMarginTop === 'function') window.setScrollMarginTop();
+
+window.addEventListener('resize', () => {
+  if (typeof window.setHeroHeight === 'function') window.setHeroHeight();
+  if (typeof window.setScrollMarginTop === 'function') window.setScrollMarginTop();
+}); 
