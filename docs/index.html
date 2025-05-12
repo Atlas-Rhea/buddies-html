@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Buddies Open HTML Prototype</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/buddies-html/assets/index-Cn1szhX4.js"></script>
-    <link rel="stylesheet" crossorigin href="/buddies-html/assets/index-C3-805gH.css">
+    <script type="module" crossorigin src="/buddies-html/assets/index-Bxa1UZwQ.js"></script>
+    <link rel="stylesheet" crossorigin href="/buddies-html/assets/index-qmQ4LqzS.css">
   </head>
   <body class="bg-white text-gray-900">
     <div id="app">
@@ -216,76 +216,322 @@
       <div class="px-6 py-3">
         <div id="champions-list" class="px-6 py-6 text-[#444] text-lg rounded-xl">
           <!-- Year Winners Containers -->
-          <div class="mb-6 year-winners" data-year="2024">
-            <p class="font-bold text-xl mb-1">2024</p>
-            <ul class="mb-2">
-              <li><span class="font-semibold">Champions:</span> Anthony Di Iorio, Reno Di Salvo, Rocco Piccinino, Michael Piccinino</li>
-              <li><span class="font-semibold">Runners Up:</span> Michael Francella, Daniel Giancola, Paul La Monica, Charles Pal</li>
-              <li><span class="font-semibold">Closest to the Pin:</span> Barbara Hacking, Mark Avola</li>
-              <li><span class="font-semibold">Longest Drive:</span> Madeline Pallotta, Chris Ahn</li>
-              <li><span class="font-semibold">Best Dressed:</span> Brian Damianidis</li>
-              <li><span class="font-semibold">Putting Challenge:</span> 3-way tie: Rick Cybulski, Nate Fennema, Michael Ly</li>
-            </ul>
+          <div class="mb-6 year-winners flex items-center gap-6" data-year="2024">
+            <div class="flex flex-col items-center justify-center mr-4">
+              <!-- Golf Trophy SVG -->
+              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
+                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
+                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
+                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
+                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
+                </g>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center mb-2">
+                <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2024</span>
+              </div>
+              <div class="mb-4">
+                <span class="font-bold text-lg">Champions:</span>
+                <ul class="ml-6 list-disc">
+                  <li>Anthony Di Iorio</li>
+                  <li>Reno Di Salvo</li>
+                  <li>Rocco Piccinino</li>
+                  <li>Michael Piccinino</li>
+                </ul>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Runners Up</span>:
+                <span>Michael Francella, Daniel Giancola, Paul La Monica, Charles Pal</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Closest to the Pin</span>:
+                <span>Barbara Hacking, Mark Avola</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Longest Drive</span>:
+                <span>Madeline Pallotta, Chris Ahn</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Best Dressed</span>:
+                <span>Brian Damianidis</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Putting Challenge</span>:
+                <span>3-way tie: Rick Cybulski, Nate Fennema, Michael Ly</span>
+              </div>
+            </div>
           </div>
-          <div class="mb-6 year-winners hidden" data-year="2023">
-            <p class="font-bold text-xl mb-1">2023</p>
-            <ul class="mb-2">
-              <li><span class="font-semibold">Champions:</span> Robert Anton, Larry Guy, Richard Goode, Braydon Evans</li>
-              <li><span class="font-semibold">Runners Up:</span> Fred Nanouris, Brian Conley, Jennifer Boudreau, Sean Farry</li>
-              <li><span class="font-semibold">Putting Challenge:</span> Zee Power</li>
-              <li><span class="font-semibold">Closest to the Pin:</span> Zee Power</li>
-              <li><span class="font-semibold">Longest Drive:</span> Michael Francella, Nancy Boyd</li>
-            </ul>
+          <div class="mb-6 year-winners hidden flex items-center gap-6" data-year="2023">
+            <div class="flex flex-col items-center justify-center mr-4">
+              <!-- Golf Trophy SVG -->
+              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
+                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
+                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
+                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
+                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
+                </g>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center mb-2">
+                <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2023</span>
+              </div>
+              <div class="mb-4">
+                <span class="font-bold text-lg">Champions:</span>
+                <ul class="ml-6 list-disc">
+                  <li>Robert Anton</li>
+                  <li>Larry Guy</li>
+                  <li>Richard Goode</li>
+                  <li>Braydon Evans</li>
+                </ul>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Runners Up</span>:
+                <span>Fred Nanouris, Brian Conley, Jennifer Boudreau, Sean Farry</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Putting Challenge</span>:
+                <span>Zee Power</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Closest to the Pin</span>:
+                <span>Zee Power</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Longest Drive</span>:
+                <span>Michael Francella, Nancy Boyd</span>
+              </div>
+            </div>
           </div>
-          <div class="mb-6 year-winners hidden" data-year="2022">
-            <p class="font-bold text-xl mb-1">2022</p>
-            <ul class="mb-2">
-              <li><span class="font-semibold">Champions:</span> Team Next Edge: Braydon Evans, Rich Goode, Larry Guy, Tom Jarmai</li>
-              <li><span class="font-semibold">Runners Up:</span> Team Mediterranean: Paolo LaMonica, Rudy Morrone, John Zinati, Michael Francella</li>
-              <li><span class="font-semibold">Closest to the Pin:</span> David LeClaire, Brooke McClelland</li>
-              <li><span class="font-semibold">Longest Drive:</span> Braydon Evans, Barbara Hacking</li>
-              <li><span class="font-semibold">Putting Challenge:</span> Tied – Mitch Sager, Warren Downs</li>
-            </ul>
+          <div class="mb-6 year-winners hidden flex items-center gap-6" data-year="2022">
+            <div class="flex flex-col items-center justify-center mr-4">
+              <!-- Golf Trophy SVG -->
+              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
+                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
+                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
+                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
+                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
+                </g>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center mb-2">
+                <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2022</span>
+              </div>
+              <div class="mb-4">
+                <span class="font-bold text-lg">Champions:</span>
+                <ul class="ml-6 list-disc">
+                  <li>Braydon Evans</li>
+                  <li>Rich Goode</li>
+                  <li>Larry Guy</li>
+                  <li>Tom Jarmai</li>
+                </ul>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Runners Up</span>:
+                <span>Paolo LaMonica, Rudy Morrone, John Zinati, Michael Francella</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Closest to the Pin</span>:
+                <span>David LeClaire, Brooke McClelland</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Longest Drive</span>:
+                <span>Braydon Evans, Barbara Hacking</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Putting Challenge</span>:
+                <span>Tied – Mitch Sager, Warren Downs</span>
+              </div>
+            </div>
           </div>
-          <div class="mb-6 year-winners hidden" data-year="2021">
-            <p class="font-bold text-xl mb-1">2021</p>
-            <ul class="mb-2">
-              <li><span class="font-semibold">Champions:</span> Team Palozzi (Nonno Ennio, Sons Michael, Lucas, and Nicholas)</li>
-              <li><span class="font-semibold">Runners Up:</span> Mark McLarney, Terry O'Brien, Bruce Cormier, Dan Dunn</li>
-              <li><span class="font-semibold">Closest to the Pin:</span> Steven Daily, Anthony Scilipoti</li>
-              <li><span class="font-semibold">Longest Drive:</span> Nancy Boyd</li>
-              <li><span class="font-semibold">Best Dressed:</span> Barbara Hacking and Nancy Boyd (both came dressed up in costume)</li>
-            </ul>
+          <div class="mb-6 year-winners hidden flex items-center gap-6" data-year="2021">
+            <div class="flex flex-col items-center justify-center mr-4">
+              <!-- Golf Trophy SVG -->
+              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
+                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
+                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
+                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
+                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
+                </g>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center mb-2">
+                <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2021</span>
+              </div>
+              <div class="mb-4">
+                <span class="font-bold text-lg">Champions:</span>
+                <ul class="ml-6 list-disc">
+                  <li>Nonno Ennio</li>
+                  <li>Michael Palozzi</li>
+                  <li>Lucas Palozzi</li>
+                  <li>Nicholas Palozzi</li>
+                </ul>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Runners Up</span>:
+                <span>Mark McLarney, Terry O'Brien, Bruce Cormier, Dan Dunn</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Closest to the Pin</span>:
+                <span>Steven Daily, Anthony Scilipoti</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Longest Drive</span>:
+                <span>Nancy Boyd</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Best Dressed</span>:
+                <span>Barbara Hacking and Nancy Boyd (both came dressed up in costume)</span>
+              </div>
+            </div>
           </div>
-          <div class="mb-6 year-winners hidden" data-year="2020">
-            <p class="font-bold text-xl mb-1">2020</p>
-            <ul class="mb-2">
-              <li>Glenn Belcourt, Barb Hacking, Dan Della Rosa, Fred Nanouris</li>
-            </ul>
+          <div class="mb-6 year-winners hidden flex items-center gap-6" data-year="2020">
+            <div class="flex flex-col items-center justify-center mr-4">
+              <!-- Golf Trophy SVG -->
+              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
+                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
+                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
+                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
+                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
+                </g>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center mb-2">
+                <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2020</span>
+              </div>
+              <div class="mb-4">
+                <span class="font-bold text-lg">Champions:</span>
+                <ul class="ml-6 list-disc">
+                  <li>Glenn Belcourt</li>
+                  <li>Barb Hacking</li>
+                  <li>Dan Della Rosa</li>
+                  <li>Fred Nanouris</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="mb-6 year-winners hidden" data-year="2019">
-            <p class="font-bold text-xl mb-1">2019</p>
-            <ul class="mb-2">
-              <li>Paul Greven, Andre Tilban Rios, Joe Younder, Michael Nitsos</li>
-            </ul>
+          <div class="mb-6 year-winners hidden flex items-center gap-6" data-year="2019">
+            <div class="flex flex-col items-center justify-center mr-4">
+              <!-- Golf Trophy SVG -->
+              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
+                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
+                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
+                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
+                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
+                </g>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center mb-2">
+                <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2019</span>
+              </div>
+              <div class="mb-4">
+                <span class="font-bold text-lg">Champions:</span>
+                <ul class="ml-6 list-disc">
+                  <li>Paul Greven</li>
+                  <li>Andre Tilban Rios</li>
+                  <li>Joe Younder</li>
+                  <li>Michael Nitsos</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="mb-6 year-winners hidden" data-year="2018">
-            <p class="font-bold text-xl mb-1">2018</p>
-            <ul class="mb-2">
-              <li>Kathleen Wong, Mike Coote, Robbie Coote (16)</li>
-            </ul>
+          <div class="mb-6 year-winners hidden flex items-center gap-6" data-year="2018">
+            <div class="flex flex-col items-center justify-center mr-4">
+              <!-- Golf Trophy SVG -->
+              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
+                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
+                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
+                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
+                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
+                </g>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center mb-2">
+                <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2018</span>
+              </div>
+              <div class="mb-4">
+                <span class="font-bold text-lg">Champions:</span>
+                <ul class="ml-6 list-disc">
+                  <li>Kathleen Wong</li>
+                  <li>Mike Coote</li>
+                  <li>Robbie Coote (16)</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="mb-6 year-winners hidden" data-year="2017">
-            <p class="font-bold text-xl mb-1">2017</p>
-            <ul class="mb-2">
-              <li>Barbara Hacking, Jeff Craig, Andrew Battalli (10)</li>
-            </ul>
+          <div class="mb-6 year-winners hidden flex items-center gap-6" data-year="2017">
+            <div class="flex flex-col items-center justify-center mr-4">
+              <!-- Golf Trophy SVG -->
+              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
+                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
+                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
+                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
+                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
+                </g>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center mb-2">
+                <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2017</span>
+              </div>
+              <div class="mb-4">
+                <span class="font-bold text-lg">Champions:</span>
+                <ul class="ml-6 list-disc">
+                  <li>Barbara Hacking</li>
+                  <li>Jeff Craig</li>
+                  <li>Andrew Battalli (10)</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="mb-6 year-winners hidden" data-year="2016">
-            <p class="font-bold text-xl mb-1">2016</p>
-            <ul class="mb-2">
-              <li>Christine Damianidis, Thang Le, Mason Damianidis</li>
-            </ul>
+          <div class="mb-6 year-winners hidden flex items-center gap-6" data-year="2016">
+            <div class="flex flex-col items-center justify-center mr-4">
+              <!-- Golf Trophy SVG -->
+              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
+                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
+                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
+                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
+                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
+                </g>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center mb-2">
+                <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2016</span>
+              </div>
+              <div class="mb-4">
+                <span class="font-bold text-lg">Champions:</span>
+                <ul class="ml-6 list-disc">
+                  <li>Christine Damianidis</li>
+                  <li>Thang Le</li>
+                  <li>Mason Damianidis</li>
+                </ul>
+              </div>
+            </div>
           </div>
           <!-- End Year Winners Containers -->
         </div>
@@ -318,25 +564,21 @@
     <!-- Veritas -->
     <div class="flex flex-col items-center text-center">
       <img src="assets/veritas-logo.png" alt="Veritas Investment Research logo" class="h-16 md:h-20 mb-4 mx-auto" loading="lazy" />
-      <h3 class="text-2xl font-bold text-[#406c3a] mb-2">VERITAS <span class="font-normal text-[#406c3a]">Investment Research</span></h3>
       <p class="text-[#444] mb-2">Veritas provides completely independent equity research. Our analysis and conclusions are based on an organization's fundamentals and business outlook. We don't make exaggerated price predictions or issue cheerleading reports. Instead, we realize that there are far too many variables affecting stock prices to peg their future values. While we may miss out on temporary price momentum, our philosophy is that over the longer-term there are certain investments that should be made and others that should be avoided.<br><a href="https://www.veritascorp.com" class="underline text-[#406c3a]" target="_blank">www.veritascorp.com</a></p>
     </div>
     <!-- Babysoft -->
     <div class="flex flex-col items-center text-center">
       <img src="assets/babysoft-logo.png" alt="Babysoft logo" class="h-16 md:h-20 mb-4 mx-auto" loading="lazy" />
-      <h3 class="text-2xl font-bold text-[#406c3a] mb-2">BABYSOFT</h3>
       <p class="text-[#444] mb-2">Babysoft since 2005, is a 100% Canadian owned telecom service provider licensed by Canadian Radio–television and Telecommunications Commission (CRTC). We have been serving the Canadian small to medium size businesses for more than 10 years, specialized in design and develop unified business and telecommunication applications. The philosophy of Babysoft is very simple: Provide simple and high quality services and solutions to our customers. We believe by having the right customers with the right technologies, it will greatly improve the productivity of their business, reduce costs, and help them to grow. We understand in order to make us success, we need to make our customers success, and this is the primary principal of Babysoft.<br><a href="https://www.babysoft.ca" class="underline text-[#406c3a]" target="_blank">www.babysoft.ca</a></p>
     </div>
     <!-- Balanced+ -->
     <div class="flex flex-col items-center text-center">
       <img src="assets/balanced-logo.png" alt="Balanced+ logo" class="max-h-16 md:max-h-20 w-auto mb-4 mx-auto object-contain" loading="lazy" />
-      <h3 class="text-2xl font-bold text-[#406c3a] mb-2">BALANCED+</h3>
       <p class="text-[#444] mb-2">For over 25 years, BALANCED+ has been a Maximizer CRM and Microsoft Dynamics 365 certified solution provider. We specialize in providing CRM and other Information System solutions tailored to your business.<br>Our IT engineering services can handle your ever growing business needs. We are a boutique IT consulting firm that you will enjoy working with!<br><a href="https://www.balanced.plus" class="underline text-[#406c3a]" target="_blank">www.balanced.plus</a></p>
     </div>
     <!-- Teeza -->
     <div class="flex flex-col items-center text-center">
       <img src="assets/teeza-logo.png" alt="Teeza logo" class="h-32 md:h-40 mb-4 mx-auto" loading="lazy" />
-      <h3 class="text-2xl font-bold text-[#406c3a] mb-2">TEEZA</h3>
       <p class="text-[#444] mb-2">Our mission is your marketing. We specialize in event promotion, custom clothing and employee incentives. No job is too big or too small. Quality, reliability, pride–TEEZA.<br><a href="https://www.goteeza.com" class="underline text-[#406c3a]" target="_blank">www.goteeza.com</a></p>
     </div>
   </div>
@@ -347,18 +589,18 @@
     <h2 class="mx-6 text-2xl md:text-3xl font-bold text-green-900 tracking-wide text-center whitespace-nowrap">TRUSTED PARTNERS</h2>
     <div class="hidden md:block flex-1 h-px bg-gradient-to-l from-sky-400 via-green-500 to-orange-500 max-w-[40%]" aria-hidden="true"></div>
   </div>
-  <div class="max-w-[1172px] mx-auto px-2 md:px-8">
-    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-10 gap-4 justify-center items-center justify-items-center mx-auto min-w-0">
-      <img src="assets/trusted-1.png" alt="Partner 1" class="h-12 md:h-16 lg:h-24 xl:h-28 w-auto object-contain flex-1 min-w-0" loading="lazy" />
-      <img src="assets/trusted-2.png" alt="Partner 2" class="h-12 md:h-16 lg:h-24 xl:h-28 w-auto object-contain flex-1 min-w-0" loading="lazy" />
-      <img src="assets/trusted-3.png" alt="Partner 3" class="h-12 md:h-16 lg:h-24 xl:h-28 w-auto object-contain flex-1 min-w-0" loading="lazy" />
-      <img src="assets/trusted-4.png" alt="Partner 4" class="h-12 md:h-16 lg:h-24 xl:h-28 w-auto object-contain flex-1 min-w-0" loading="lazy" />
-      <img src="assets/trusted-5.png" alt="Partner 5" class="h-12 md:h-16 lg:h-24 xl:h-28 w-auto object-contain flex-1 min-w-0" loading="lazy" />
-      <img src="assets/trusted-6.png" alt="Partner 6" class="h-12 md:h-16 lg:h-24 xl:h-28 w-auto object-contain flex-1 min-w-0" loading="lazy" />
-      <img src="assets/trusted-7.png" alt="Partner 7" class="h-12 md:h-16 lg:h-24 xl:h-28 w-auto object-contain flex-1 min-w-0" loading="lazy" />
-      <img src="assets/trusted-8.png" alt="Partner 8" class="h-12 md:h-16 lg:h-24 xl:h-28 w-auto object-contain flex-1 min-w-0" loading="lazy" />
-      <img src="assets/trusted-9.png" alt="Partner 9" class="h-12 md:h-16 lg:h-24 xl:h-28 w-auto object-contain flex-1 min-w-0" loading="lazy" />
-      <img src="assets/trusted-10.png" alt="Partner 10" class="h-12 md:h-16 lg:h-24 xl:h-28 w-auto object-contain flex-1 min-w-0" loading="lazy" />
+  <div class="max-w-full mx-auto px-0 md:px-2">
+    <div class="grid grid-cols-2 grid-rows-5 md:grid-cols-10 md:grid-rows-1 gap-4 justify-center items-center justify-items-center mx-auto min-w-0 max-w-full overflow-hidden">
+      <img src="assets/trusted-1.png" alt="Partner 1" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
+      <img src="assets/trusted-2.png" alt="Partner 2" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
+      <img src="assets/trusted-3.png" alt="Partner 3" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
+      <img src="assets/trusted-4.png" alt="Partner 4" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
+      <img src="assets/trusted-5.png" alt="Partner 5" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
+      <img src="assets/trusted-6.png" alt="Partner 6" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
+      <img src="assets/trusted-7.png" alt="Partner 7" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
+      <img src="assets/trusted-8.png" alt="Partner 8" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
+      <img src="assets/trusted-9.png" alt="Partner 9" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
+      <img src="assets/trusted-10.png" alt="Partner 10" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
     </div>
   </div>
 </section> 
@@ -410,82 +652,89 @@
 </section> 
 <footer class="w-full bg-white border-t border-gray-200 pt-12 pb-4 px-4 max-w-[1440px] mx-auto">
   <div class="max-w-7xl mx-auto">
-    <!-- Newsletter Signup -->
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-10">
-      <div class="mb-6 md:mb-0 text-center md:text-left">
-        <h2 class="text-4xl md:text-5xl font-semibold text-black mb-2 leading-tight">Get Our Updates<br>Always Fast</h2>
-        <p class="text-gray-500 text-lg">We'll keep you updated.</p>
+    <div class="grid grid-cols-1 md:[grid-template-columns:400px_1fr_auto] gap-8 mb-8">
+      <!-- Newsletter (left column, fixed width on desktop) -->
+      <div class="flex flex-col justify-between h-full md:w-[400px] md:flex-none">
+        <div class="mb-6 md:mb-0 text-center md:text-left">
+          <h2 class="text-4xl md:text-5xl font-semibold text-black mb-2 leading-tight">Get Our Updates Always Fast</h2>
+          <p class="text-gray-500 text-lg">We'll keep you updated.</p>
+        </div>
+        <form class="w-full mx-auto md:mx-0">
+          <div class="flex flex-col sm:flex-row w-full">
+            <input type="email" placeholder="Email Address" class="w-full sm:flex-1 rounded-full sm:rounded-l-full sm:rounded-r-none bg-gray-100 px-6 py-4 text-lg focus:outline-none focus:ring-2 focus:ring-[#406c3a] border border-gray-300 border-r-0" required="">
+            <button type="submit" class="w-full sm:w-auto min-w-[48px] rounded-full sm:rounded-r-full sm:rounded-l-none bg-[#406c3a] text-white px-4 py-4 text-lg font-medium flex items-center justify-center gap-2 shadow-sm hover:bg-[#2e4d25] transition border border-[#406c3a] border-l-0 -ml-px">
+              <span class="w-3 h-3 bg-white rounded-full mr-2"></span>SUBMIT
+            </button>
+          </div>
+        </form>
       </div>
-      <form class="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto max-w-xl">
-        <input type="email" placeholder="Email Address" class="flex-1 rounded-full bg-gray-100 px-6 py-4 text-lg focus:outline-none focus:ring-2 focus:ring-[#406c3a]" required />
-        <button type="submit" class="rounded-full bg-[#406c3a] text-white px-8 py-3 text-lg font-medium flex items-center gap-2 shadow-sm hover:bg-[#2e4d25] transition">
-          <span class="w-3 h-3 bg-white rounded-full mr-2"></span>SUBMIT
-        </button>
-      </form>
-    </div>
-    <hr class="my-8 border-gray-200" />
-    <!-- Footer Main Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-      <!-- Logo & Description -->
-      <div class="flex flex-col items-start">
-        <img src="assets/buddies-logo.svg" alt="The Buddies Open logo" class="h-10 w-auto md:h-[73px] md:w-[235px] mb-4" loading="lazy" />
-        <p class="text-gray-700 text-base max-w-xs">Come To Enjoy A Day Of Golf, Or To Enjoy The World-Famous Sausages And Beverages, All Are Welcome (Families And Children Included)!!</p>
-      </div>
-      <!-- Quick Links -->
-      <div>
-        <h3 class="text-2xl font-bold mb-4">QUICK LINKS</h3>
-        <ul class="space-y-2 text-lg">
-          <li><a href="#" class="text-[#406c3a] font-semibold">Home</a></li>
-          <li><a href="#about" class="hover:text-[#406c3a] transition">About</a></li>
-          <li><a href="#event" class="hover:text-[#406c3a] transition">This Years Event</a></li>
-          <li><a href="#rules" class="hover:text-[#406c3a] transition">Rules</a></li>
-          <li><a href="#champions" class="hover:text-[#406c3a] transition">Champions</a></li>
-          <li><a href="#sponsors" class="hover:text-[#406c3a] transition">Sponsors</a></li>
-          <li><a href="#gallery" class="hover:text-[#406c3a] transition">Gallery</a></li>
-        </ul>
-      </div>
-      <!-- Get in Touch -->
-      <div>
-        <h3 class="text-2xl font-bold mb-4">GET IN TOUCH</h3>
-        <ul class="space-y-4 text-lg overflow-visible">
-          <li class="flex items-center gap-6 overflow-visible">
-            <!-- Email SVG (Heroicons) -->
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-[#406c3a] object-contain inline-block flex-shrink-0 overflow-visible">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-            </svg>
-            <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=thebuddiesopen@gmail.com" class="hover:underline break-all" target="_blank">thebuddiesopen@gmail.com</a>
-          </li>
-          <li class="flex items-center gap-6 overflow-visible">
-            <!-- Phone SVG (Heroicons) -->
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-[#406c3a] object-contain inline-block flex-shrink-0 overflow-visible">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-            </svg>
-            <a href="tel:9073332257" class="hover:underline break-all">(907) 333-2257</a>
-          </li>
-        </ul>
-      </div>
-      <!-- Follow Us -->
-      <div>
-        <h3 class="text-2xl font-bold mb-4">FOLLOW US</h3>
-        <div class="flex flex-wrap gap-x-4 gap-y-2 mt-2">
-          <!-- Twitter (Font Awesome) -->
-          <a href="#" class="text-[#406c3a] hover:text-[#1da1f2] flex items-center justify-center" aria-label="Twitter">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-8 h-8 object-contain inline-block text-[#406c3a]" fill="currentColor"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
-          </a>
-          <!-- Instagram (Font Awesome) -->
-          <a href="#" class="text-[#406c3a] hover:text-[#e1306c] flex items-center justify-center" aria-label="Instagram">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-8 h-8 object-contain inline-block text-[#406c3a]" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
-          </a>
-          <!-- LinkedIn (Font Awesome) -->
-          <a href="#" class="text-[#406c3a] hover:text-[#0077b5] flex items-center justify-center" aria-label="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-8 h-8 object-contain inline-block text-[#406c3a]" fill="currentColor"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
-          </a>
-          <!-- Google (Font Awesome) -->
-          <a href="#" class="text-[#406c3a] hover:text-[#db4437] flex items-center justify-center" aria-label="Google Plus">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" class="w-8 h-8 object-contain inline-block text-[#406c3a]" fill="currentColor"><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg>
-          </a>
+      <!-- Schedule & Address (center column) -->
+      <div class="flex flex-col justify-between h-full">
+        <!-- Schedule -->
+        <div class="mb-8 md:mb-4">
+          <h3 class="text-2xl font-bold mb-4">Schedule</h3>
+          <div class="font-semibold">Monday - Sunday</div>
+          <div><span class="font-semibold">Bar:</span> 9am – 11pm</div>
+          <div><span class="font-semibold">Kitchen:</span> 9am – 7pm</div>
+        </div>
+        <!-- Address -->
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Address</h3>
+          <div>8 Stefan cel Mare, Iasi</div>
+          <div>700063</div>
         </div>
       </div>
+      <!-- Follow Us & Contact (right column) -->
+      <div class="flex flex-col justify-between h-full">
+        <!-- Follow Us -->
+        <div class="mb-8 md:mb-4">
+          <h3 class="text-2xl font-bold mb-4">FOLLOW US</h3>
+          <div class="flex flex-wrap gap-x-4 gap-y-2 mt-2">
+            <!-- Twitter (Font Awesome) -->
+            <a href="#" class="text-[#406c3a] hover:text-[#1da1f2] flex items-center justify-center" aria-label="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-8 h-8 object-contain inline-block text-[#406c3a]" fill="currentColor"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+            </a>
+            <!-- Instagram (Font Awesome) -->
+            <a href="#" class="text-[#406c3a] hover:text-[#e1306c] flex items-center justify-center" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-8 h-8 object-contain inline-block text-[#406c3a]" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+            </a>
+            <!-- LinkedIn (Font Awesome) -->
+            <a href="#" class="text-[#406c3a] hover:text-[#0077b5] flex items-center justify-center" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-8 h-8 object-contain inline-block text-[#406c3a]" fill="currentColor"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+            </a>
+            <!-- Google (Font Awesome) -->
+            <a href="#" class="text-[#406c3a] hover:text-[#db4437] flex items-center justify-center" aria-label="Google Plus">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" class="w-8 h-8 object-contain inline-block text-[#406c3a]" fill="currentColor"><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg>
+            </a>
+          </div>
+        </div>
+        <!-- Contact -->
+        <div>
+          <h3 class="text-2xl font-bold mb-4">GET IN TOUCH</h3>
+          <ul class="space-y-4 text-lg overflow-visible">
+            <li class="flex items-center gap-6 overflow-visible">
+              <!-- Email SVG (Heroicons) -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-[#406c3a] object-contain inline-block flex-shrink-0 overflow-visible">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+              </svg>
+              <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=thebuddiesopen@gmail.com" class="hover:underline break-all" target="_blank">thebuddiesopen@gmail.com</a>
+            </li>
+            <li class="flex items-center gap-6 overflow-visible">
+              <!-- Phone SVG (Heroicons) -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-[#406c3a] object-contain inline-block flex-shrink-0 overflow-visible">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+              </svg>
+              <a href="tel:9073332257" class="hover:underline break-all">(907) 333-2257</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr class="my-8 border-gray-200" />
+    <!-- Logo & Description (full width below columns) -->
+    <div class="flex flex-col items-start">
+      <img src="assets/buddies-logo.svg" alt="The Buddies Open logo" class="h-10 w-auto md:h-[73px] md:w-[235px] mb-4" loading="lazy" />
+      <p class="text-gray-700 text-base max-w-xs">Come To Enjoy A Day Of Golf, Or To Enjoy The World-Famous Sausages And Beverages, All Are Welcome (Families And Children Included)!!</p>
     </div>
     <!-- Love Hands SVG bottom right -->
     <div class="relative min-h-[200px]">
