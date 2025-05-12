@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Buddies Open HTML Prototype</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/buddies-html/assets/index-BqdZGgh7.js"></script>
-    <link rel="stylesheet" crossorigin href="/buddies-html/assets/index-Cj9IErll.css">
+    <script type="module" crossorigin src="/buddies-html/assets/index-FfhBQY5A.js"></script>
+    <link rel="stylesheet" crossorigin href="/buddies-html/assets/index-Cm5ePtLy.css">
   </head>
   <body class="bg-white text-gray-900">
     <div id="app">
@@ -27,8 +27,8 @@
   <!-- Nav links (hidden on mobile) -->
   <div class="hidden md:flex flex-1 justify-center min-w-0">
     <ul class="flex justify-center gap-4 lg:gap-8 text-[#5a7a5a] text-base navshrink:text-sm lg:text-lg xl:text-xl font-medium px-2 lg:px-6 min-w-0">
-      <li class="min-w-0"><a href="#about" class="hover:underline block max-w-full">About</a></li>
-      <li class="min-w-0"><a href="#event" class="hover:underline whitespace-nowrap block max-w-full">This Years Event</a></li>
+      <li class="min-w-0"><a href="#about-us" class="hover:underline block max-w-full">About</a></li>
+      <li class="min-w-0"><a href="#join-us" class="hover:underline whitespace-nowrap block max-w-full">This Years Event</a></li>
       <li class="min-w-0"><a href="#rules" class="hover:underline block max-w-full">Rules</a></li>
       <li class="min-w-0"><a href="#champions" class="hover:underline block max-w-full">Champions</a></li>
       <li class="min-w-0"><a href="#sponsors" class="hover:underline block max-w-full">Sponsors</a></li>
@@ -45,8 +45,8 @@
 <!-- Mobile menu (hidden by default, toggled by hamburger) -->
 <div id="mobile-menu" class="md:hidden px-4 pb-2 mt-4 hidden">
   <ul class="flex flex-col gap-2 text-[#406c3a] text-base font-medium bg-white rounded-lg shadow-md p-4">
-    <li><a href="#about" class="block py-2 px-2 rounded hover:bg-[#f8faf5]">About</a></li>
-    <li><a href="#event" class="block py-2 px-2 rounded hover:bg-[#f8faf5]">This Years Event</a></li>
+    <li><a href="#about-us" class="block py-2 px-2 rounded hover:bg-[#f8faf5]">About</a></li>
+    <li><a href="#join-us" class="block py-2 px-2 rounded hover:bg-[#f8faf5]">This Years Event</a></li>
     <li><a href="#rules" class="block py-2 px-2 rounded hover:bg-[#f8faf5]">Rules</a></li>
     <li><a href="#champions" class="block py-2 px-2 rounded hover:bg-[#f8faf5]">Champions</a></li>
     <li><a href="#sponsors" class="block py-2 px-2 rounded hover:bg-[#f8faf5]">Sponsors</a></li>
@@ -74,7 +74,7 @@
     </div>
   </div>
 </section> 
-<section class="relative flex flex-col md:gap-2 py-10 md:py-16 px-2 lg:px-8 bg-white max-w-[1440px] mx-auto overflow-x-visible">
+<section id="join-us" class="relative flex flex-col md:gap-2 py-10 md:py-16 px-2 lg:px-8 bg-white max-w-[1440px] mx-auto overflow-x-visible">
   <div class="flex flex-col-reverse md:flex-row items-center md:items-center justify-center gap-12 w-full">
     <!-- Desktop: image+badge group -->
     <div class="relative w-full md:flex-1 md:min-w-[300px] md:max-w-[522px] h-auto md:h-[544px] flex flex-col items-center mb-8 md:mb-0" id="join-us-image-col">
@@ -107,7 +107,18 @@
 // Removed JS that sets the height of the text column to allow natural text flow
 </script> 
 <section class="relative w-full max-w-[1440px] mx-auto flex flex-col items-center justify-center py-16 px-4 text-[1.25em] what-we-do-section" style="overflow:visible; font-size: 1.25em;">
-  <div class="absolute inset-0 pointer-events-none opacity-10" aria-hidden="true" style="overflow:visible;">
+  <style>
+    @media (max-width: 640px) {
+      .what-we-do-golf-ball {
+        width: 64.5% !important;
+        height: 64.5% !important;
+      }
+    }
+  </style>
+  <div class="absolute inset-0 pointer-events-none" style="opacity:0.09;overflow:visible;">
+    <img src="assets/golf_ball_transparent.png" alt="Golf Ball" class="what-we-do-golf-ball" style="width:130%;height:130%;object-fit:contain;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:0;" loading="lazy" />
+  </div>
+  <div class="absolute inset-0 pointer-events-none opacity-25" aria-hidden="true" style="overflow:visible;">
     <svg width="100%" height="100%" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow:visible;">
       <circle cx="720" cy="160" r="300" fill="#87A66F" />
     </svg>
@@ -121,7 +132,7 @@
     </p>
   </div>
 </section> 
-<section class="max-w-[1440px] mx-auto px-4 py-16 flex flex-col md:flex-row items-center justify-center gap-8">
+<section id="about-us" class="max-w-[1440px] mx-auto px-4 py-16 flex flex-col md:flex-row items-center justify-center gap-8">
   <!-- Text Column -->
   <div class="w-full md:w-1/2 max-w-xl min-w-0 flex flex-col gap-6 text-left justify-center">
     <p class="text-[#406c3a] font-semibold uppercase tracking-wide text-lg md:text-xl">About us</p>
@@ -152,7 +163,7 @@
     </div>
   </div>
 </section> 
-<section class="py-16 px-6 md:px-12 xl:px-32 flex justify-center items-center min-h-screen bg-white max-w-[1440px] mx-auto box-border">
+<section id="rules" class="py-16 px-6 md:px-12 xl:px-32 flex justify-center items-center min-h-screen bg-white max-w-[1440px] mx-auto box-border">
   <div class="rounded-3xl shadow-xl max-w-[1172px] w-full p-10 flex flex-col gap-10 box-border" style="background: url('assets/green-rules.svg') center/cover no-repeat;">
     <!-- Row 1: Tournament Rules (left), Image (right) -->
     <div class="flex flex-col md:flex-row gap-8 items-stretch">
@@ -197,7 +208,7 @@
     </div>
   </div>
 </section> 
-<section class="py-16 px-4 flex flex-col items-center bg-white max-w-[1440px] mx-auto">
+<section id="champions" class="py-16 px-4 flex flex-col items-center bg-white max-w-[1440px] mx-auto">
   <h2 class="text-4xl md:text-5xl font-extrabold text-[#406c3a] text-center mb-14">PREVIOUS CHAMPIONS</h2>
   <div class="w-full max-w-3xl mx-auto mt-8">
     <div class="rounded-xl shadow-lg overflow-hidden mb-8 border-2 border-[#406c3a] bg-white">
@@ -216,20 +227,9 @@
       <div class="px-6 py-3">
         <div id="champions-list" class="px-6 py-6 text-[#444] text-lg rounded-xl">
           <!-- Year Winners Containers -->
-          <div class="mb-6 year-winners flex items-center gap-6" data-year="2024">
-            <div class="flex flex-col items-center justify-center mr-4">
-              <!-- Golf Trophy SVG -->
-              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g>
-                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
-                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
-                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
-                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
-                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
-                </g>
-              </svg>
-            </div>
-            <div class="flex-1">
+          <div class="mb-6 year-winners grid grid-cols-2 grid-rows-2 gap-x-2 gap-y-1 items-start" style="grid-template-areas: 'trophy year' 'details details'; grid-template-columns: auto 1fr; grid-template-rows: auto auto;" data-year="2024">
+            <img src="assets/golf-trophy.png" alt="Golf Trophy" class="golf-trophy-img" loading="lazy" style="grid-area: trophy; align-self: start;" />
+            <div class="flex-1" style="grid-area: year; align-self: start;">
               <div class="flex items-center mb-2">
                 <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2024</span>
               </div>
@@ -242,6 +242,8 @@
                   <li>Michael Piccinino</li>
                 </ul>
               </div>
+            </div>
+            <div class="col-span-2" style="grid-area: details;">
               <div class="mb-2">
                 <span class="font-semibold">Runners Up</span>:
                 <span>Michael Francella, Daniel Giancola, Paul La Monica, Charles Pal</span>
@@ -264,20 +266,9 @@
               </div>
             </div>
           </div>
-          <div class="mb-6 year-winners hidden flex items-center gap-6" data-year="2023">
-            <div class="flex flex-col items-center justify-center mr-4">
-              <!-- Golf Trophy SVG -->
-              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g>
-                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
-                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
-                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
-                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
-                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
-                </g>
-              </svg>
-            </div>
-            <div class="flex-1">
+          <div class="mb-6 year-winners hidden grid grid-cols-2 grid-rows-2 gap-x-2 gap-y-1 items-start" style="grid-template-areas: 'trophy year' 'details details'; grid-template-columns: auto 1fr; grid-template-rows: auto auto;" data-year="2023">
+            <img src="assets/golf-trophy.png" alt="Golf Trophy" class="golf-trophy-img" loading="lazy" style="grid-area: trophy; align-self: start;" />
+            <div class="flex-1" style="grid-area: year; align-self: start;">
               <div class="flex items-center mb-2">
                 <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2023</span>
               </div>
@@ -290,6 +281,8 @@
                   <li>Braydon Evans</li>
                 </ul>
               </div>
+            </div>
+            <div class="col-span-2" style="grid-area: details;">
               <div class="mb-2">
                 <span class="font-semibold">Runners Up</span>:
                 <span>Fred Nanouris, Brian Conley, Jennifer Boudreau, Sean Farry</span>
@@ -308,20 +301,9 @@
               </div>
             </div>
           </div>
-          <div class="mb-6 year-winners hidden flex items-center gap-6" data-year="2022">
-            <div class="flex flex-col items-center justify-center mr-4">
-              <!-- Golf Trophy SVG -->
-              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g>
-                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
-                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
-                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
-                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
-                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
-                </g>
-              </svg>
-            </div>
-            <div class="flex-1">
+          <div class="mb-6 year-winners hidden grid grid-cols-2 grid-rows-2 gap-x-2 gap-y-1 items-start" style="grid-template-areas: 'trophy year' 'details details'; grid-template-columns: auto 1fr; grid-template-rows: auto auto;" data-year="2022">
+            <img src="assets/golf-trophy.png" alt="Golf Trophy" class="golf-trophy-img" loading="lazy" style="grid-area: trophy; align-self: start;" />
+            <div class="flex-1" style="grid-area: year; align-self: start;">
               <div class="flex items-center mb-2">
                 <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2022</span>
               </div>
@@ -334,6 +316,8 @@
                   <li>Tom Jarmai</li>
                 </ul>
               </div>
+            </div>
+            <div class="col-span-2" style="grid-area: details;">
               <div class="mb-2">
                 <span class="font-semibold">Runners Up</span>:
                 <span>Paolo LaMonica, Rudy Morrone, John Zinati, Michael Francella</span>
@@ -352,20 +336,9 @@
               </div>
             </div>
           </div>
-          <div class="mb-6 year-winners hidden flex items-center gap-6" data-year="2021">
-            <div class="flex flex-col items-center justify-center mr-4">
-              <!-- Golf Trophy SVG -->
-              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g>
-                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
-                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
-                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
-                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
-                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
-                </g>
-              </svg>
-            </div>
-            <div class="flex-1">
+          <div class="mb-6 year-winners hidden grid grid-cols-2 grid-rows-2 gap-x-2 gap-y-1 items-start" style="grid-template-areas: 'trophy year' 'details details'; grid-template-columns: auto 1fr; grid-template-rows: auto auto;" data-year="2021">
+            <img src="assets/golf-trophy.png" alt="Golf Trophy" class="golf-trophy-img" loading="lazy" style="grid-area: trophy; align-self: start;" />
+            <div class="flex-1" style="grid-area: year; align-self: start;">
               <div class="flex items-center mb-2">
                 <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2021</span>
               </div>
@@ -378,6 +351,8 @@
                   <li>Nicholas Palozzi</li>
                 </ul>
               </div>
+            </div>
+            <div class="col-span-2" style="grid-area: details;">
               <div class="mb-2">
                 <span class="font-semibold">Runners Up</span>:
                 <span>Mark McLarney, Terry O'Brien, Bruce Cormier, Dan Dunn</span>
@@ -396,20 +371,9 @@
               </div>
             </div>
           </div>
-          <div class="mb-6 year-winners hidden flex items-center gap-6" data-year="2020">
-            <div class="flex flex-col items-center justify-center mr-4">
-              <!-- Golf Trophy SVG -->
-              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g>
-                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
-                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
-                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
-                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
-                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
-                </g>
-              </svg>
-            </div>
-            <div class="flex-1">
+          <div class="mb-6 year-winners hidden grid grid-cols-2 grid-rows-2 gap-x-2 gap-y-1 items-start" style="grid-template-areas: 'trophy year' 'details details'; grid-template-columns: auto 1fr; grid-template-rows: auto auto;" data-year="2020">
+            <img src="assets/golf-trophy.png" alt="Golf Trophy" class="golf-trophy-img" loading="lazy" style="grid-area: trophy; align-self: start;" />
+            <div class="flex-1" style="grid-area: year; align-self: start;">
               <div class="flex items-center mb-2">
                 <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2020</span>
               </div>
@@ -424,20 +388,9 @@
               </div>
             </div>
           </div>
-          <div class="mb-6 year-winners hidden flex items-center gap-6" data-year="2019">
-            <div class="flex flex-col items-center justify-center mr-4">
-              <!-- Golf Trophy SVG -->
-              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g>
-                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
-                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
-                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
-                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
-                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
-                </g>
-              </svg>
-            </div>
-            <div class="flex-1">
+          <div class="mb-6 year-winners hidden grid grid-cols-2 grid-rows-2 gap-x-2 gap-y-1 items-start" style="grid-template-areas: 'trophy year' 'details details'; grid-template-columns: auto 1fr; grid-template-rows: auto auto;" data-year="2019">
+            <img src="assets/golf-trophy.png" alt="Golf Trophy" class="golf-trophy-img" loading="lazy" style="grid-area: trophy; align-self: start;" />
+            <div class="flex-1" style="grid-area: year; align-self: start;">
               <div class="flex items-center mb-2">
                 <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2019</span>
               </div>
@@ -452,20 +405,9 @@
               </div>
             </div>
           </div>
-          <div class="mb-6 year-winners hidden flex items-center gap-6" data-year="2018">
-            <div class="flex flex-col items-center justify-center mr-4">
-              <!-- Golf Trophy SVG -->
-              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g>
-                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
-                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
-                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
-                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
-                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
-                </g>
-              </svg>
-            </div>
-            <div class="flex-1">
+          <div class="mb-6 year-winners hidden grid grid-cols-2 grid-rows-2 gap-x-2 gap-y-1 items-start" style="grid-template-areas: 'trophy year' 'details details'; grid-template-columns: auto 1fr; grid-template-rows: auto auto;" data-year="2018">
+            <img src="assets/golf-trophy.png" alt="Golf Trophy" class="golf-trophy-img" loading="lazy" style="grid-area: trophy; align-self: start;" />
+            <div class="flex-1" style="grid-area: year; align-self: start;">
               <div class="flex items-center mb-2">
                 <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2018</span>
               </div>
@@ -479,20 +421,9 @@
               </div>
             </div>
           </div>
-          <div class="mb-6 year-winners hidden flex items-center gap-6" data-year="2017">
-            <div class="flex flex-col items-center justify-center mr-4">
-              <!-- Golf Trophy SVG -->
-              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g>
-                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
-                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
-                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
-                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
-                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
-                </g>
-              </svg>
-            </div>
-            <div class="flex-1">
+          <div class="mb-6 year-winners hidden grid grid-cols-2 grid-rows-2 gap-x-2 gap-y-1 items-start" style="grid-template-areas: 'trophy year' 'details details'; grid-template-columns: auto 1fr; grid-template-rows: auto auto;" data-year="2017">
+            <img src="assets/golf-trophy.png" alt="Golf Trophy" class="golf-trophy-img" loading="lazy" style="grid-area: trophy; align-self: start;" />
+            <div class="flex-1" style="grid-area: year; align-self: start;">
               <div class="flex items-center mb-2">
                 <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2017</span>
               </div>
@@ -506,20 +437,9 @@
               </div>
             </div>
           </div>
-          <div class="mb-6 year-winners hidden flex items-center gap-6" data-year="2016">
-            <div class="flex flex-col items-center justify-center mr-4">
-              <!-- Golf Trophy SVG -->
-              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g>
-                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
-                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
-                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
-                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
-                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
-                </g>
-              </svg>
-            </div>
-            <div class="flex-1">
+          <div class="mb-6 year-winners hidden grid grid-cols-2 grid-rows-2 gap-x-2 gap-y-1 items-start" style="grid-template-areas: 'trophy year' 'details details'; grid-template-columns: auto 1fr; grid-template-rows: auto auto;" data-year="2016">
+            <img src="assets/golf-trophy.png" alt="Golf Trophy" class="golf-trophy-img" loading="lazy" style="grid-area: trophy; align-self: start;" />
+            <div class="flex-1" style="grid-area: year; align-self: start;">
               <div class="flex items-center mb-2">
                 <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2016</span>
               </div>
@@ -556,9 +476,32 @@
       opacity: 1;
       text-decoration: none;
     }
+    /* Golf Trophy Image Styling */
+    .golf-trophy-img {
+      width: 12.22rem;
+      height: 12.22rem;
+      margin-bottom: 0.5rem;
+      float: left;
+      display: block;
+      padding-top: 0.5rem;
+    }
+    @media (max-width: 768px) {
+      .golf-trophy-img {
+        width: 7.15rem;
+        height: 7.15rem;
+        padding-top: 0.25rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .golf-trophy-img {
+        width: 5.46rem;
+        height: 5.46rem;
+        padding-top: 0.15rem;
+      }
+    }
   </style>
 </section> 
-<section class="py-16 px-4 bg-[#f7f7f7] max-w-[1440px] mx-auto border border-gray-200 2xl:rounded-lg">
+<section id="sponsors" class="py-16 px-4 bg-[#f7f7f7] max-w-[1440px] mx-auto border border-gray-200 2xl:rounded-lg">
   <h2 class="text-4xl md:text-5xl font-extrabold text-[#406c3a] text-center mb-12">SPONSORS</h2>
   <div class="max-w-[1172px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 mt-13">
     <!-- Veritas -->
@@ -604,7 +547,7 @@
     </div>
   </div>
 </section> 
-<section class="gallery max-w-[1440px] mx-auto w-full border border-gray-200 2xl:rounded-lg">
+<section id="gallery" class="gallery max-w-[1440px] mx-auto w-full border border-gray-200 2xl:rounded-lg">
   <h2 class="gallery__title mb-12">GALLERY</h2>
   <p class="gallery__year">2024</p>
 
