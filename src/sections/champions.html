@@ -17,76 +17,322 @@
       <div class="px-6 py-3">
         <div id="champions-list" class="px-6 py-6 text-[#444] text-lg rounded-xl">
           <!-- Year Winners Containers -->
-          <div class="mb-6 year-winners" data-year="2024">
-            <p class="font-bold text-xl mb-1">2024</p>
-            <ul class="mb-2">
-              <li><span class="font-semibold">Champions:</span> Anthony Di Iorio, Reno Di Salvo, Rocco Piccinino, Michael Piccinino</li>
-              <li><span class="font-semibold">Runners Up:</span> Michael Francella, Daniel Giancola, Paul La Monica, Charles Pal</li>
-              <li><span class="font-semibold">Closest to the Pin:</span> Barbara Hacking, Mark Avola</li>
-              <li><span class="font-semibold">Longest Drive:</span> Madeline Pallotta, Chris Ahn</li>
-              <li><span class="font-semibold">Best Dressed:</span> Brian Damianidis</li>
-              <li><span class="font-semibold">Putting Challenge:</span> 3-way tie: Rick Cybulski, Nate Fennema, Michael Ly</li>
-            </ul>
+          <div class="mb-6 year-winners flex items-center gap-6" data-year="2024">
+            <div class="flex flex-col items-center justify-center mr-4">
+              <!-- Golf Trophy SVG -->
+              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
+                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
+                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
+                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
+                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
+                </g>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center mb-2">
+                <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2024</span>
+              </div>
+              <div class="mb-4">
+                <span class="font-bold text-lg">Champions:</span>
+                <ul class="ml-6 list-disc">
+                  <li>Anthony Di Iorio</li>
+                  <li>Reno Di Salvo</li>
+                  <li>Rocco Piccinino</li>
+                  <li>Michael Piccinino</li>
+                </ul>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Runners Up</span>:
+                <span>Michael Francella, Daniel Giancola, Paul La Monica, Charles Pal</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Closest to the Pin</span>:
+                <span>Barbara Hacking, Mark Avola</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Longest Drive</span>:
+                <span>Madeline Pallotta, Chris Ahn</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Best Dressed</span>:
+                <span>Brian Damianidis</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Putting Challenge</span>:
+                <span>3-way tie: Rick Cybulski, Nate Fennema, Michael Ly</span>
+              </div>
+            </div>
           </div>
-          <div class="mb-6 year-winners hidden" data-year="2023">
-            <p class="font-bold text-xl mb-1">2023</p>
-            <ul class="mb-2">
-              <li><span class="font-semibold">Champions:</span> Robert Anton, Larry Guy, Richard Goode, Braydon Evans</li>
-              <li><span class="font-semibold">Runners Up:</span> Fred Nanouris, Brian Conley, Jennifer Boudreau, Sean Farry</li>
-              <li><span class="font-semibold">Putting Challenge:</span> Zee Power</li>
-              <li><span class="font-semibold">Closest to the Pin:</span> Zee Power</li>
-              <li><span class="font-semibold">Longest Drive:</span> Michael Francella, Nancy Boyd</li>
-            </ul>
+          <div class="mb-6 year-winners hidden flex items-center gap-6" data-year="2023">
+            <div class="flex flex-col items-center justify-center mr-4">
+              <!-- Golf Trophy SVG -->
+              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
+                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
+                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
+                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
+                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
+                </g>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center mb-2">
+                <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2023</span>
+              </div>
+              <div class="mb-4">
+                <span class="font-bold text-lg">Champions:</span>
+                <ul class="ml-6 list-disc">
+                  <li>Robert Anton</li>
+                  <li>Larry Guy</li>
+                  <li>Richard Goode</li>
+                  <li>Braydon Evans</li>
+                </ul>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Runners Up</span>:
+                <span>Fred Nanouris, Brian Conley, Jennifer Boudreau, Sean Farry</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Putting Challenge</span>:
+                <span>Zee Power</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Closest to the Pin</span>:
+                <span>Zee Power</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Longest Drive</span>:
+                <span>Michael Francella, Nancy Boyd</span>
+              </div>
+            </div>
           </div>
-          <div class="mb-6 year-winners hidden" data-year="2022">
-            <p class="font-bold text-xl mb-1">2022</p>
-            <ul class="mb-2">
-              <li><span class="font-semibold">Champions:</span> Team Next Edge: Braydon Evans, Rich Goode, Larry Guy, Tom Jarmai</li>
-              <li><span class="font-semibold">Runners Up:</span> Team Mediterranean: Paolo LaMonica, Rudy Morrone, John Zinati, Michael Francella</li>
-              <li><span class="font-semibold">Closest to the Pin:</span> David LeClaire, Brooke McClelland</li>
-              <li><span class="font-semibold">Longest Drive:</span> Braydon Evans, Barbara Hacking</li>
-              <li><span class="font-semibold">Putting Challenge:</span> Tied – Mitch Sager, Warren Downs</li>
-            </ul>
+          <div class="mb-6 year-winners hidden flex items-center gap-6" data-year="2022">
+            <div class="flex flex-col items-center justify-center mr-4">
+              <!-- Golf Trophy SVG -->
+              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
+                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
+                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
+                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
+                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
+                </g>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center mb-2">
+                <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2022</span>
+              </div>
+              <div class="mb-4">
+                <span class="font-bold text-lg">Champions:</span>
+                <ul class="ml-6 list-disc">
+                  <li>Braydon Evans</li>
+                  <li>Rich Goode</li>
+                  <li>Larry Guy</li>
+                  <li>Tom Jarmai</li>
+                </ul>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Runners Up</span>:
+                <span>Paolo LaMonica, Rudy Morrone, John Zinati, Michael Francella</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Closest to the Pin</span>:
+                <span>David LeClaire, Brooke McClelland</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Longest Drive</span>:
+                <span>Braydon Evans, Barbara Hacking</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Putting Challenge</span>:
+                <span>Tied – Mitch Sager, Warren Downs</span>
+              </div>
+            </div>
           </div>
-          <div class="mb-6 year-winners hidden" data-year="2021">
-            <p class="font-bold text-xl mb-1">2021</p>
-            <ul class="mb-2">
-              <li><span class="font-semibold">Champions:</span> Team Palozzi (Nonno Ennio, Sons Michael, Lucas, and Nicholas)</li>
-              <li><span class="font-semibold">Runners Up:</span> Mark McLarney, Terry O'Brien, Bruce Cormier, Dan Dunn</li>
-              <li><span class="font-semibold">Closest to the Pin:</span> Steven Daily, Anthony Scilipoti</li>
-              <li><span class="font-semibold">Longest Drive:</span> Nancy Boyd</li>
-              <li><span class="font-semibold">Best Dressed:</span> Barbara Hacking and Nancy Boyd (both came dressed up in costume)</li>
-            </ul>
+          <div class="mb-6 year-winners hidden flex items-center gap-6" data-year="2021">
+            <div class="flex flex-col items-center justify-center mr-4">
+              <!-- Golf Trophy SVG -->
+              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
+                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
+                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
+                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
+                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
+                </g>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center mb-2">
+                <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2021</span>
+              </div>
+              <div class="mb-4">
+                <span class="font-bold text-lg">Champions:</span>
+                <ul class="ml-6 list-disc">
+                  <li>Nonno Ennio</li>
+                  <li>Michael Palozzi</li>
+                  <li>Lucas Palozzi</li>
+                  <li>Nicholas Palozzi</li>
+                </ul>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Runners Up</span>:
+                <span>Mark McLarney, Terry O'Brien, Bruce Cormier, Dan Dunn</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Closest to the Pin</span>:
+                <span>Steven Daily, Anthony Scilipoti</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Longest Drive</span>:
+                <span>Nancy Boyd</span>
+              </div>
+              <div class="mb-2">
+                <span class="font-semibold">Best Dressed</span>:
+                <span>Barbara Hacking and Nancy Boyd (both came dressed up in costume)</span>
+              </div>
+            </div>
           </div>
-          <div class="mb-6 year-winners hidden" data-year="2020">
-            <p class="font-bold text-xl mb-1">2020</p>
-            <ul class="mb-2">
-              <li>Glenn Belcourt, Barb Hacking, Dan Della Rosa, Fred Nanouris</li>
-            </ul>
+          <div class="mb-6 year-winners hidden flex items-center gap-6" data-year="2020">
+            <div class="flex flex-col items-center justify-center mr-4">
+              <!-- Golf Trophy SVG -->
+              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
+                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
+                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
+                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
+                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
+                </g>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center mb-2">
+                <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2020</span>
+              </div>
+              <div class="mb-4">
+                <span class="font-bold text-lg">Champions:</span>
+                <ul class="ml-6 list-disc">
+                  <li>Glenn Belcourt</li>
+                  <li>Barb Hacking</li>
+                  <li>Dan Della Rosa</li>
+                  <li>Fred Nanouris</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="mb-6 year-winners hidden" data-year="2019">
-            <p class="font-bold text-xl mb-1">2019</p>
-            <ul class="mb-2">
-              <li>Paul Greven, Andre Tilban Rios, Joe Younder, Michael Nitsos</li>
-            </ul>
+          <div class="mb-6 year-winners hidden flex items-center gap-6" data-year="2019">
+            <div class="flex flex-col items-center justify-center mr-4">
+              <!-- Golf Trophy SVG -->
+              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
+                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
+                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
+                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
+                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
+                </g>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center mb-2">
+                <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2019</span>
+              </div>
+              <div class="mb-4">
+                <span class="font-bold text-lg">Champions:</span>
+                <ul class="ml-6 list-disc">
+                  <li>Paul Greven</li>
+                  <li>Andre Tilban Rios</li>
+                  <li>Joe Younder</li>
+                  <li>Michael Nitsos</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="mb-6 year-winners hidden" data-year="2018">
-            <p class="font-bold text-xl mb-1">2018</p>
-            <ul class="mb-2">
-              <li>Kathleen Wong, Mike Coote, Robbie Coote (16)</li>
-            </ul>
+          <div class="mb-6 year-winners hidden flex items-center gap-6" data-year="2018">
+            <div class="flex flex-col items-center justify-center mr-4">
+              <!-- Golf Trophy SVG -->
+              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
+                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
+                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
+                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
+                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
+                </g>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center mb-2">
+                <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2018</span>
+              </div>
+              <div class="mb-4">
+                <span class="font-bold text-lg">Champions:</span>
+                <ul class="ml-6 list-disc">
+                  <li>Kathleen Wong</li>
+                  <li>Mike Coote</li>
+                  <li>Robbie Coote (16)</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="mb-6 year-winners hidden" data-year="2017">
-            <p class="font-bold text-xl mb-1">2017</p>
-            <ul class="mb-2">
-              <li>Barbara Hacking, Jeff Craig, Andrew Battalli (10)</li>
-            </ul>
+          <div class="mb-6 year-winners hidden flex items-center gap-6" data-year="2017">
+            <div class="flex flex-col items-center justify-center mr-4">
+              <!-- Golf Trophy SVG -->
+              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
+                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
+                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
+                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
+                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
+                </g>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center mb-2">
+                <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2017</span>
+              </div>
+              <div class="mb-4">
+                <span class="font-bold text-lg">Champions:</span>
+                <ul class="ml-6 list-disc">
+                  <li>Barbara Hacking</li>
+                  <li>Jeff Craig</li>
+                  <li>Andrew Battalli (10)</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="mb-6 year-winners hidden" data-year="2016">
-            <p class="font-bold text-xl mb-1">2016</p>
-            <ul class="mb-2">
-              <li>Christine Damianidis, Thang Le, Mason Damianidis</li>
-            </ul>
+          <div class="mb-6 year-winners hidden flex items-center gap-6" data-year="2016">
+            <div class="flex flex-col items-center justify-center mr-4">
+              <!-- Golf Trophy SVG -->
+              <svg class="w-24 h-24 text-yellow-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#C2B280"/>
+                  <rect x="24" y="44" width="16" height="12" rx="4" fill="#E6C200"/>
+                  <rect x="28" y="36" width="8" height="8" rx="2" fill="#FFD700"/>
+                  <path d="M32 36C22 36 14 28 14 18V10H20V18C20 25 25 30 32 30C39 30 44 25 44 18V10H50V18C50 28 42 36 32 36Z" fill="#FFD700" stroke="#C2B280" stroke-width="2"/>
+                  <circle cx="32" cy="18" r="10" fill="#FFF8DC" stroke="#FFD700" stroke-width="2"/>
+                </g>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center mb-2">
+                <span class="text-3xl md:text-4xl font-extrabold text-black mr-3">YEAR 2016</span>
+              </div>
+              <div class="mb-4">
+                <span class="font-bold text-lg">Champions:</span>
+                <ul class="ml-6 list-disc">
+                  <li>Christine Damianidis</li>
+                  <li>Thang Le</li>
+                  <li>Mason Damianidis</li>
+                </ul>
+              </div>
+            </div>
           </div>
           <!-- End Year Winners Containers -->
         </div>
