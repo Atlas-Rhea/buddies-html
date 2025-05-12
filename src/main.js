@@ -56,3 +56,13 @@ window.addEventListener('resize', () => {
   if (typeof window.setHeroHeight === 'function') window.setHeroHeight();
   if (typeof window.setScrollMarginTop === 'function') window.setScrollMarginTop();
 }); 
+
+// Mobile menu toggle logic (for production)
+const toggle = document.getElementById('mobile-menu-toggle');
+const menu = document.getElementById('mobile-menu');
+if (toggle && menu) {
+  toggle.addEventListener('click', function() {
+    const isOpen = menu.classList.toggle('hidden') === false;
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+} 
