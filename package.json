@@ -6,7 +6,6 @@
     "@squoosh/cli": "^0.7.1",
     "@tabler/icons": "^3.31.0",
     "@tailwindcss/forms": "^0.5.10",
-    "@tailwindcss/postcss": "^4.1.5",
     "@tailwindcss/vite": "^4.1.5",
     "astro": "^5.7.10",
     "bivvy": "^0.1.5",
@@ -20,9 +19,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "postbuild": "cmd /c \"xcopy dist docs /E /I /Y\"",
+    "build": "vite build && node scripts/build-static-pages.js",
+    "postbuild": "cmd /c \"xcopy assets docs/assets /E /I /Y & xcopy ref-png docs/assets/ref-png /E /I /Y & if exist *.png xcopy *.png \"docs/assets\" /Y 2>nul & if exist *.jpg xcopy *.jpg \"docs/assets\" /Y 2>nul & if exist *.jpeg xcopy *.jpeg \"docs/assets\" /Y 2>nul & if exist *.svg xcopy *.svg \"docs/assets\" /Y 2>nul\"",
     "update-docs-index": "node scripts/update-docs-index.js",
+    "build-static-pages": "node scripts/build-static-pages.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -31,6 +31,7 @@
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.52.0",
+    "@tailwindcss/postcss": "^4.1.7",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
     "serve": "^14.2.4",

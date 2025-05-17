@@ -5,9 +5,9 @@ const path = require('path');
 const sectionOrder = [
   'nav-bar.html',
   'hero.html',
-  'join-us.html',
-  'what-we-do.html',
+  // 'join-us.html',
   'about-us.html',
+  'what-we-do.html',
   'rules.html',
   'champions.html',
   'sponsors.html',

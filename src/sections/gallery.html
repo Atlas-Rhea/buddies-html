@@ -1,4 +1,4 @@
-<section id="gallery" class="gallery max-w-[1440px] mx-auto w-full border border-gray-200 2xl:rounded-lg">
+<section id="gallery" class="gallery max-w-[1440px] mx-auto w-full border border-gray-200 2xl:rounded-lg xl:max-h-[750px] 2xl:max-h-[900px]">
   <h2 class="gallery__title mb-12">GALLERY</h2>
   <p class="gallery__year">2024</p>
 
@@ -13,34 +13,17 @@
     <figure class="gallery__item"><img src="assets/gallery-2.png" alt="Gallery 2"></figure>
     <figure class="gallery__item"><img src="assets/gallery-3.png" alt="Gallery 3"></figure>
     <!-- The rest (show only ≥ 640 px) -->
-    <figure class="gallery__item hide-mobile"><img src="assets/gallery-5.png" alt="Gallery 5"></figure>
-    <figure class="gallery__item hide-mobile"><img src="assets/gallery-6.png" alt="Gallery 6"></figure>
-    <figure class="gallery__item hide-mobile"><img src="assets/gallery-7.png" alt="Gallery 7">
-      <a href="/gallery" class="gallery__cta gallery__cta--overlay">
-        <svg viewBox="0 0 100 100" width="90" height="90" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <radialGradient id="golfBallGradient" cx="50%" cy="40%" r="60%">
-              <stop offset="0%" stop-color="#fff"/>
-              <stop offset="100%" stop-color="#e0e0e0"/>
-            </radialGradient>
-            <pattern id="dimples" patternUnits="userSpaceOnUse" width="10" height="10">
-              <circle cx="2" cy="2" r="1.5" fill="#d0d0d0" opacity="0.5"/>
-              <circle cx="8" cy="2" r="1.5" fill="#d0d0d0" opacity="0.5"/>
-              <circle cx="2" cy="8" r="1.5" fill="#d0d0d0" opacity="0.5"/>
-              <circle cx="8" cy="8" r="1.5" fill="#d0d0d0" opacity="0.5"/>
-            </pattern>
-          </defs>
-          <circle cx="50" cy="50" r="45" fill="url(#golfBallGradient)" stroke="#bbb" stroke-width="3"/>
-          <circle cx="50" cy="50" r="43" fill="url(#dimples)" />
-          <ellipse cx="50" cy="80" rx="25" ry="6" fill="#bbb" opacity="0.2"/>
-          <text x="50" y="56" text-anchor="middle" fill="#406932" font-size="16" font-family="'Oxygen', Arial, sans-serif" font-weight="bold" alignment-baseline="middle" dominant-baseline="middle">VIEW ALL</text>
-        </svg>
-      </a>
-    </figure>
-    <figure class="gallery__item gallery__item--cta">
-      <a href="/gallery" class="gallery__cta gallery__cta--tile" style="background-image: url('assets/green-button.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-        VIEW ALL
-      </a>
-    </figure>
+    <figure class="gallery__item"><img src="assets/gallery-5.png" alt="Gallery 5"></figure>
+    <figure class="gallery__item"><img src="assets/gallery-6.png" alt="Gallery 6"></figure>
+    <figure class="gallery__item hidden md:block lg:hidden"><img src="assets/gallery-7.png" alt="Gallery 7"></figure>
+    <figure class="gallery__item md:col-span-2"><img src="assets/gallery-8.jpg" alt="Gallery 8" style="aspect-ratio:2/1;"></figure>
+  </div>
+  <!-- Responsive spacing for See all button to ensure visibility and separation on all screens -->
+  <div class="hidden md:flex justify-end px-6 pb-8 mt-8 md:mt-12 xl:mt-16 xl:pb-12">
+    <a href="gallery-masonry.html" class="bg-[#406c3a] text-white rounded-full px-6 py-2 font-semibold shadow hover:bg-[#335c3a] transition">See all</a>
+  </div>
+  <!-- Mobile See all button -->
+  <div class="flex md:hidden justify-center px-4 pb-8 mt-8">
+    <a href="gallery-masonry.html" class="bg-[#406c3a] text-white rounded-full px-8 py-3 font-semibold shadow hover:bg-[#335c3a] transition w-full max-w-xs text-center">See all</a>
   </div>
 </section> 

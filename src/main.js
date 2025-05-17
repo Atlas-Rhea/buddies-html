@@ -49,6 +49,19 @@ function setScrollMarginTop() {
 }
 window.setScrollMarginTop = setScrollMarginTop;
 
+// --- Parallax Effect for Hero Image ---
+function setHeroParallax() {
+  const heroSection = document.querySelector('section');
+  const heroImg = heroSection && heroSection.querySelector('img');
+  if (!heroSection || !heroImg) return;
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    // Parallax: move image slower than scroll (adjust 0.4 for more/less effect)
+    heroImg.style.transform = `translateY(${scrollY * 0.4}px)`;
+  });
+}
+window.setHeroParallax = setHeroParallax;
+
 // Ensure hero height and scroll margin logic runs on page load and resize (for production)
 if (typeof window.setHeroHeight === 'function') window.setHeroHeight();
 if (typeof window.setScrollMarginTop === 'function') window.setScrollMarginTop();

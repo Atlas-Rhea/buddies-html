@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buddies Open - This Year's Event</title>
+    <link rel="stylesheet" href="src/input.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/theme.css">
+  </head>
+  <body class="bg-white text-gray-900">
+    <div id="app">
+      <div id="sections"></div>
+    </div>
+    <script type="module">
+      // Only load nav-bar, event-details, and footer for this page
+      const sectionFiles = [
+        'nav-bar.html',
+        'event-details.html',
+        'footer.html',
+      ];
+      const container = document.getElementById('sections');
+      Promise.all(
+        sectionFiles.map(file =>
+          fetch(`/src/sections/${file}`).then(res => res.text())
+        )
+      ).then(htmlArr => {
+        container.innerHTML = htmlArr.join('\n');
+        // Mobile menu toggle logic (must run after nav-bar is in DOM)
+        const toggle = document.getElementById('mobile-menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+        if (toggle && menu) {
+          toggle.addEventListener('click', function() {
+            const isOpen = menu.classList.toggle('hidden') === false;
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          });
+        }
+      });
+    </script>
+  </body>
+</html> 

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buddies Open - This Year's Event</title>
+    <link rel="stylesheet" href="src/input.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/theme.css">
+  </head>
+  <body class="bg-white text-gray-900">
+    <div id="app">
+      <div id="sections">
+<nav class="flex items-center justify-between px-4 py-3 bg-white shadow max-w-[1440px] w-full mx-auto" style="background: #fff !important; background-color: #fff !important; z-index: 200; position: relative; box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);">
+  <!-- Logo -->
+  <div class="flex items-center gap-3 min-w-0 flex-shrink">
+    <img src="assets/buddies-logo.svg" alt="The Buddies Open logo"
+      class="h-10 max-w-[100px] navshrink:h-8 navshrink:max-w-[80px] md:h-[60px] md:max-w-[140px] lg:max-w-[200px] transition-all duration-200"
+      loading="lazy" />
+  </div>
+  <!-- Hamburger for mobile -->
+  <button id="mobile-menu-toggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10" aria-label="Open menu" aria-expanded="false">
+    <span class="block w-6 h-0.5 bg-[#406c3a] mb-1"></span>
+    <span class="block w-6 h-0.5 bg-[#406c3a] mb-1"></span>
+    <span class="block w-6 h-0.5 bg-[#406c3a]"></span>
+  </button>
+  <!-- Nav links (hidden on mobile) -->
+  <div class="hidden md:flex flex-1 justify-center min-w-0">
+    <ul class="flex justify-center gap-4 lg:gap-8 text-[#5a7a5a] text-base navshrink:text-sm lg:text-lg xl:text-xl font-medium px-2 lg:px-6 min-w-0">
+      <li class="min-w-0"><a href="index.html#about-us" class="hover:underline block max-w-full">About</a></li>
+      <li class="min-w-0"><a href="event.html" class="hover:underline whitespace-nowrap block max-w-full">This Years Event</a></li>
+      <li class="min-w-0"><a href="index.html#rules" class="hover:underline block max-w-full">Rules</a></li>
+      <li class="min-w-0"><a href="index.html#champions" class="hover:underline block max-w-full">Champions</a></li>
+      <li class="min-w-0"><a href="index.html#sponsors" class="hover:underline block max-w-full">Sponsors</a></li>
+      <li class="min-w-0"><a href="gallery-masonry.html" class="hover:underline block max-w-full">Gallery</a></li>
+    </ul>
+  </div>
+  <!-- Donate button -->
+  <a href="#donate"
+    class="hidden md:flex bg-[#406c3a] text-white rounded-full px-4 py-2 items-center gap-2 font-medium shadow-md hover:bg-[#335c3a] transition min-w-0 flex-shrink min-w-[40px] navshrink:min-w-[40px] md:min-w-[100px] justify-center">
+    <span class="w-3 h-3 bg-white rounded-full inline-block"></span>
+    <span class="block max-w-full">DONATE</span>
+  </a>
+</nav>
+<!-- Mobile menu (hidden by default, toggled by hamburger) -->
+<div id="mobile-menu" class="md:hidden px-4 pb-2 mt-4 hidden">
+  <ul class="flex flex-col gap-2 text-[#406c3a] text-base font-medium bg-white rounded-lg shadow-md p-4">
+    <li><a href="index.html#about-us" class="block py-2 px-2 rounded hover:bg-[#f8faf5]">About</a></li>
+    <li><a href="event.html" class="block py-2 px-2 rounded hover:bg-[#f8faf5]">This Years Event</a></li>
+    <li><a href="index.html#rules" class="block py-2 px-2 rounded hover:bg-[#f8faf5]">Rules</a></li>
+    <li><a href="index.html#champions" class="block py-2 px-2 rounded hover:bg-[#f8faf5]">Champions</a></li>
+    <li><a href="index.html#sponsors" class="block py-2 px-2 rounded hover:bg-[#f8faf5]">Sponsors</a></li>
+    <li><a href="gallery-masonry.html" class="block py-2 px-2 rounded hover:bg-[#f8faf5]">Gallery</a></li>
+    <li><a href="#donate" class="block py-2 px-2 rounded bg-[#406c3a] text-white font-semibold mt-2">DONATE</a></li>
+  </ul>
+</div> 
+<!-- Hero Section with Golf Ball Image -->
+<div class="relative w-full max-w-[1440px] mx-auto h-[340px] md:h-[420px] lg:h-[480px] overflow-hidden mb-12 flex items-center justify-center">
+  <img src="assets/golf-ball-on-course.50.jpg" alt="Golf ball on course" class="absolute inset-0 w-full h-full object-cover object-center" style="z-index:1;" loading="lazy" />
+  <div class="absolute inset-0 bg-gradient-to-t from-[#406932cc] to-[#40693233]" style="z-index:2;"></div>
+  <div class="relative z-10 flex flex-col items-center justify-center w-full h-full text-center px-4">
+    <h1 class="text-white text-4xl md:text-5xl lg:text-6xl font-extrabold drop-shadow-lg mb-2 uppercase">The Buddies Open</h1>
+    <h2 class="text-white text-2xl md:text-3xl font-semibold drop-shadow mb-4">Join us for the 32nd Annual!</h2>
+    <p class="text-white text-lg md:text-xl font-medium drop-shadow mb-2">Sunday, September 7, 2025 &bull; 8:00am Shotgun Start</p>
+    <div class="flex gap-4 justify-center mt-4">
+      <a href="#" class="button button-primary text-lg px-8 py-3 shadow-lg">Donate</a>
+      <a href="#" class="button bg-transparent text-white border border-white hover:bg-white/10 text-lg px-8 py-3 shadow-lg">Register</a>
+    </div>
+  </div>
+</div>
+
+<!-- Main Event Details Section -->
+<section id="event-details" class="max-w-[1440px] mx-auto px-4 py-8 flex flex-col gap-16 items-center justify-center bg-white">
+  <div class="w-full max-w-5xl flex flex-col md:flex-row gap-12 items-center justify-center">
+    <!-- Group Photo (desktop only) -->
+    <div class="flex-1 w-full max-w-md hidden md:block">
+      <img src="assets/golf-trophy.png" alt="Golf trophy" class="rounded-2xl w-full object-cover" loading="lazy" />
+    </div>
+    <!-- Event Info -->
+    <div class="flex-1 w-full flex flex-col gap-4 text-left md:text-left relative">
+      <!-- Ghosted trophy for mobile -->
+      <img src="assets/golf-trophy.png" alt="Golf trophy background" class="absolute inset-0 w-full h-full object-contain opacity-10 pointer-events-none md:hidden" style="z-index:0;" aria-hidden="true" />
+      <div class="relative z-10 flex flex-col gap-4">
+        <span class="small-label mb-2">This Year's Event</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-primary mb-2">Over $140,000 raised for Cancer related charities:<br>Supporting children and their families.</h2>
+        <p class="text-base md:text-lg text-[#444] mb-2">The Buddies relentless attack on Cancer will tee off this year on <b>Sunday, September 7, 2025</b> with an <b>8am shotgun start</b>.</p>
+        <p class="text-base md:text-lg text-[#444] mb-2">Come to enjoy a day of golf and/or the world-famous sausage and BEvERages. All are welcome (families and children included)!</p>
+        <p class="text-base md:text-lg text-[#444] mb-2 font-semibold">This is a Scramble Tournament so get your foursomes together.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Info Cards Section with Green SVG Background -->
+  <div class="w-full max-w-6xl mt-16 rounded-3xl overflow-hidden shadow-xl relative" style="background: url('assets/green-rules.svg') center/cover no-repeat;">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-8 md:p-12 justify-center items-stretch">
+      <!-- Inclusions Card -->
+      <div class="bg-white/90 rounded-xl p-6 flex flex-col gap-2 shadow">
+        <h3 class="text-xl font-bold text-primary mb-2">Inclusions</h3>
+        <ul class="list-disc list-inside text-base text-[#444]">
+          <li>Green fees and cart</li>
+          <li>Buddies official tournament hat with embroidered logo</li>
+          <li>BBQ-hamburgers and world famous sausages</li>
+          <li>Unlimited BEvERages at the BBQ</li>
+        </ul>
+      </div>
+      <!-- Trophies Card -->
+      <div class="bg-white/90 rounded-xl p-6 flex flex-col gap-2 shadow">
+        <h3 class="text-xl font-bold text-primary mb-2">Trophies</h3>
+        <ul class="list-disc list-inside text-base text-[#444]">
+          <li>1st & 2nd place team</li>
+          <li>Closest to the pin</li>
+          <li>Longest drive</li>
+          <li>Other surprises</li>
+        </ul>
+      </div>
+      <!-- Where Card -->
+      <div class="bg-white/90 rounded-xl p-6 flex flex-col gap-2 shadow">
+        <h3 class="text-xl font-bold text-primary mb-2">Where</h3>
+        <p class="text-base text-[#444] mb-1"><a href="https://www.bethesdagrangegolf.com/" target="_blank" class="link-primary underline">Bethesda Grange Golf Course</a><br>12808 Warden Avenue<br>Stouffville, ON L4A 7X5<br><span class="text-sm text-secondary">Phone: 905-888-1955</span></p>
+        <p class="text-base text-[#444]">After, residence for BBQ (Yonge & Finch)</p>
+      </div>
+      <!-- When Card -->
+      <div class="bg-white/90 rounded-xl p-6 flex flex-col gap-2 shadow">
+        <h3 class="text-xl font-bold text-primary mb-2">Inclusions</h3>
+        <ul class="list-disc list-inside text-base text-[#444]">
+          <li><b>September 7, 2025</b></li>
+          <li><b>8:00AM Shotgun sharp</b></li>
+          <li><b>Registration will open April, 2025</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section> 
+<footer class="w-full bg-white pb-4 px-4 max-w-[1440px] mx-auto pt-12 relative">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:[grid-template-columns:400px_320px_1fr_auto] gap-8 mb-8">
+      <!-- Newsletter (left column, fixed width on desktop) -->
+      <div class="flex flex-col justify-between h-full md:w-[400px] md:flex-none">
+        <div class="mb-6 md:mb-0 text-center md:text-left">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-8 leading-tight">Get Our Updates <br>Always Fast</h2>
+          <p class="text-gray-500 text-lg">We'll keep you updated.</p>
+        </div>
+        <form class="w-full mx-auto md:mx-0">
+          <div class="flex flex-col sm:flex-row w-full">
+            <input type="email" placeholder="Email Address" class="w-full sm:flex-1 rounded-full sm:rounded-l-full sm:rounded-r-none bg-gray-100 px-6 py-4 text-lg focus:outline-none focus:ring-2 focus:ring-[#406c3a] border border-gray-300 border-r-0 mb-3 sm:mb-0" required="">
+            <button type="submit" class="w-full sm:w-auto min-w-[48px] rounded-full sm:rounded-r-full sm:rounded-l-none bg-[#406c3a] text-white px-4 py-4 text-lg font-medium flex items-center justify-center gap-2 shadow-sm hover:bg-[#2e4d25] transition border border-[#406c3a] border-l-0 -ml-px">
+              <span class="w-3 h-3 bg-white rounded-full mr-2"></span>SUBMIT
+            </button>
+          </div>
+        </form>
+      </div>
+      <!-- Logo & Description (new column) -->
+      <div class="flex flex-col items-start h-full md:flex-none">
+        <img src="assets/buddies-logo.svg" alt="The Buddies Open logo" class="h-10 w-auto md:h-[73px] md:w-[235px] mb-4" loading="lazy" />
+        <p class="text-gray-700 text-base max-w-xs">Come to enjoy a day of golf and/or the world-famous sausage and BEvERages. All are welcome (families and children included)!</p>
+      </div>
+      <!-- Follow Us & Contact (right column) -->
+      <div class="flex flex-col justify-between h-full relative">
+        <!-- Contact -->
+        <div>
+          <h3 class="text-2xl font-bold mb-4">GET IN TOUCH</h3>
+          <ul class="space-y-4 text-lg overflow-visible">
+            <li class="flex items-center gap-6 overflow-visible">
+              <!-- Email SVG (Heroicons) -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-[#406c3a] object-contain inline-block flex-shrink-0 overflow-visible">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+              </svg>
+              <a href="mailto:ascilipoti@theveritasfoundation.com" class="hover:underline break-all" target="_blank">ascilipoti@theveritasfoundation.com</a>
+            </li>
+            <li class="flex items-center gap-6 overflow-visible">
+              <!-- Phone SVG (Heroicons) -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-[#406c3a] object-contain inline-block flex-shrink-0 overflow-visible">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+              </svg>
+              <a href="tel:4168668783" class="hover:underline break-all">416 866 8783</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer> 
+</div>
+    </div>
+    
+  
+    <script src="main.js"></script>
+</body>
+</html> 

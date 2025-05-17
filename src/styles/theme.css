@@ -8,7 +8,7 @@
   --color-primary: #406932;
   --color-secondary: #617A43;
   --color-accent: #87A66F;
-  --clr-bg: #F7F9F2;
+  --clr-bg: #fff;
   --radius: 1rem;
 }
 /*
@@ -283,8 +283,8 @@ p,
 }
 @media (min-width: 1025px) {
   .gallery {
-    max-height: 600px;
-    overflow: hidden;
+    max-height: none;
+    overflow: visible;
   }
   .gallery__grid {
     grid-template-columns: repeat(3, 1fr);
@@ -589,4 +589,5 @@ section.gallery-section {
 
 html, body {
   scroll-behavior: smooth;
+  background: var(--clr-bg);
 }

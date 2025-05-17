@@ -2,9 +2,9 @@
 const sectionFiles = [
   'nav-bar.html',
   'hero.html',
-  'join-us.html',
-  'what-we-do.html',
+  // 'join-us.html',
   'about-us.html',
+  'what-we-do.html',
   'rules.html',
   'champions.html',
   'sponsors.html',
@@ -61,8 +61,10 @@ Promise.all(
   // --- Ensure hero height and scroll margin logic runs after sections are loaded ---
   if (typeof window.setHeroHeight === 'function') window.setHeroHeight();
   if (typeof window.setScrollMarginTop === 'function') window.setScrollMarginTop();
+  if (typeof window.setHeroParallax === 'function') window.setHeroParallax();
   window.addEventListener('resize', () => {
     if (typeof window.setHeroHeight === 'function') window.setHeroHeight();
     if (typeof window.setScrollMarginTop === 'function') window.setScrollMarginTop();
+    if (typeof window.setHeroParallax === 'function') window.setHeroParallax();
   });
 }); 
