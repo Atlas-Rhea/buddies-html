@@ -43,6 +43,11 @@ module.exports = {
     'masonry-group',
     'masonry-item',
     'gallery-hidden',
+    'gallery-header',
+    'timeline-year',
+    'timeline-year.active',
+    'timeline-year:focus',
+    'timeline-year:hover',
     // add more if needed
   ],
 }; 
