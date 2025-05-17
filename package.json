@@ -20,7 +20,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && node scripts/build-static-pages.js",
-    "postbuild": "cmd /c \"xcopy assets docs/assets /E /I /Y & xcopy ref-png docs/assets/ref-png /E /I /Y & if exist *.png xcopy *.png \"docs/assets\" /Y 2>nul & if exist *.jpg xcopy *.jpg \"docs/assets\" /Y 2>nul & if exist *.jpeg xcopy *.jpeg \"docs/assets\" /Y 2>nul & if exist *.svg xcopy *.svg \"docs/assets\" /Y 2>nul\"",
+    "postbuild": "cmd /c \"xcopy dist\\assets docs\\assets /E /I /Y & xcopy assets docs/assets /E /I /Y & xcopy ref-png docs/assets/ref-png /E /I /Y & if exist *.png xcopy *.png \"docs/assets\" /Y 2>nul & if exist *.jpg xcopy *.jpg \"docs/assets\" /Y 2>nul & if exist *.jpeg xcopy *.jpeg \"docs/assets\" /Y 2>nul & if exist *.svg xcopy *.svg \"docs/assets\" /Y 2>nul\"",
     "update-docs-index": "node scripts/update-docs-index.js",
     "build-static-pages": "node scripts/build-static-pages.js",
     "test": "echo \"Error: no test specified\" && exit 1"
