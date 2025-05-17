@@ -34,9 +34,8 @@ function buildStaticPage({
     .replace(/(["'(])\/assets\//g, '$1assets/')
     .replace(/assets\/\/+/, 'assets/');
 
-  // Only inject main.js, do not inject loadSections.js
-  const scriptTags = '\n    <script src="main.js"></script>\n';
-  html = html.replace(/<\/body>/i, scriptTags + '</body>');
+  // Remove any <script src="main.js"></script> from the final HTML
+  html = html.replace(/<script\s+src=["']main\.js["']><\/script>/g, '');
 
   // Write to output
   fs.writeFileSync(outputPath, html, 'utf8');
