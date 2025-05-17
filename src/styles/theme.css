@@ -607,9 +607,9 @@ html, body {
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-behavior: smooth;
-  height: var(--gallery-height, 60vh);
+  /* height: 60vh; */
   max-height: none;
-  min-height: 350px;
+  min-height: 500px;
   gap: 0;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */

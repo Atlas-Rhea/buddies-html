@@ -25,9 +25,9 @@
       overflow-x: scroll;
       overflow-y: hidden;
       scroll-behavior: smooth;
-      height: var(--gallery-height, 60vh);
+      /* height: 60vh; */
       max-height: none;
-      min-height: 350px;
+      min-height: 500px;
       gap: 0;
       scrollbar-width: none; /* Firefox */
       -ms-overflow-style: none; /* IE and Edge */
@@ -635,36 +635,10 @@
       }
     }
     
-    // Function to calculate and set gallery height
-    function setGalleryHeight() {
-      const footer = document.querySelector('footer');
-      const navBar = document.querySelector('nav');
-      const timeline = document.querySelector('.timeline-container');
-      
-      if (footer && navBar && timeline) {
-        const viewportHeight = window.innerHeight;
-        const footerHeight = footer.offsetHeight;
-        const navHeight = navBar.offsetHeight;
-        const timelineHeight = timeline.offsetHeight;
-        const galleryPadding = 40; // Account for padding and margins
-        
-        // Calculate available height
-        const availableHeight = viewportHeight - footerHeight - navHeight - timelineHeight - galleryPadding;
-        
-        // Set the CSS variable
-        document.documentElement.style.setProperty('--gallery-height', `${availableHeight}px`);
-      }
-    }
-
-    // Run after sections are loaded
     document.addEventListener('DOMContentLoaded', function() {
       // Wait a tick for dynamic content
       setTimeout(function() {
         attachTimelineArrows();
-        setGalleryHeight(); // Initial height calculation
-        
-        // Add resize listener
-        window.addEventListener('resize', debounce(setGalleryHeight, 100));
       }, 100);
     });
 
