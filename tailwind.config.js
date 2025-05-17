@@ -1,8 +1,9 @@
 module.exports = {
   content: [
-    './src/**/*.{html,js,jsx,ts,tsx}',
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx,html}',
     './src/sections/**/*.html',
-    './index.html'
+    './src/styles/**/*.css',
   ],
   theme: {
     extend: {
@@ -37,4 +38,11 @@ module.exports = {
     },
   },
   plugins: [],
+  safelist: [
+    'masonry',
+    'masonry-group',
+    'masonry-item',
+    'gallery-hidden',
+    // add more if needed
+  ],
 }; 
