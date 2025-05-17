@@ -61,9 +61,9 @@ const indexSectionOrder = [
   'footer.html',
 ];
 
-// Build index.html
+// Build index.html using dist/index.html as the template
 buildStaticPage({
-  templatePath: path.join(__dirname, '../index.html'),
+  templatePath: path.join(__dirname, '../dist/index.html'),
   outputPath: path.join(docsDir, 'index.html'),
   sectionFiles: indexSectionOrder,
   sectionsDir,
