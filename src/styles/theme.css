@@ -799,3 +799,14 @@ html, body {
   background: #406932;
   color: #fff;
 }
+
+/* Hide horizontal scrollbar for timeline-years */
+.timeline-years {
+  overflow-x: auto;
+  white-space: nowrap;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+.timeline-years::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
+}

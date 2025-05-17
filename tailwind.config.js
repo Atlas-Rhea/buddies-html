@@ -48,6 +48,7 @@ module.exports = {
     'timeline-year.active',
     'timeline-year:focus',
     'timeline-year:hover',
+    'timeline-years',
     // add more if needed
   ],
 }; 
