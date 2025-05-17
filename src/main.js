@@ -65,10 +65,12 @@ window.setHeroParallax = setHeroParallax;
 // Ensure hero height and scroll margin logic runs on page load and resize (for production)
 if (typeof window.setHeroHeight === 'function') window.setHeroHeight();
 if (typeof window.setScrollMarginTop === 'function') window.setScrollMarginTop();
+if (typeof window.setHeroParallax === 'function') window.setHeroParallax();
 
 window.addEventListener('resize', () => {
   if (typeof window.setHeroHeight === 'function') window.setHeroHeight();
   if (typeof window.setScrollMarginTop === 'function') window.setScrollMarginTop();
+  if (typeof window.setHeroParallax === 'function') window.setHeroParallax();
 }); 
 
 // Mobile menu toggle logic (for production)
