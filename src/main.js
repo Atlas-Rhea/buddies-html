@@ -54,9 +54,7 @@ function setHeroHeight() {
   const nav = document.querySelector('nav');
   const hero = document.querySelector('section'); // Assumes hero is the first section
   if (nav && hero) {
-    const navHeight = nav.offsetHeight;
-    hero.style.minHeight = `calc(100vh - ${navHeight}px)`;
-    hero.style.paddingTop = navHeight + 'px'; // Ensure overlay starts below nav bar
+    hero.style.minHeight = `100vh`;
   }
 }
 window.setHeroHeight = setHeroHeight;

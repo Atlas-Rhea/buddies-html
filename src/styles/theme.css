@@ -810,3 +810,14 @@ html, body {
 .timeline-years::-webkit-scrollbar {
   display: none;             /* Chrome, Safari, Opera */
 }
+
+.shadow-navglow {
+  text-shadow: 0 2px 8px #b7eac7, 0 1px 0 #fff;
+}
+
+/* Custom nav link shadow for hover effect */
+.nav-link-shadow:hover {
+  color: #5a8c4a !important; /* lighter green on hover */
+  text-shadow: 0 2px 8px #b7eac7; /* subtle light green glow */
+  transition: color 0.2s, text-shadow 0.2s;
+}

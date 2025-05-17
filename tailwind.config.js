@@ -31,6 +31,9 @@ module.exports = {
       screens: {
         'navshrink': '1064px',
       },
+      boxShadow: {
+        navglow: '0 2px 8px #b7eac7, 0 1px 0 #fff',
+      },
     },
     container: {
       center: true,
@@ -49,6 +52,8 @@ module.exports = {
     'timeline-year:focus',
     'timeline-year:hover',
     'timeline-years',
+    'shadow-navglow',
+    'hover:shadow-navglow',
     // add more if needed
   ],
 }; 
