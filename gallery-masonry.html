@@ -275,6 +275,9 @@
       background-color: white;
       border-color: rgba(97, 122, 67, 0.3);
     }
+    html.gallery-masonry-scroll {
+      scroll-padding-top: 84px; /* Match navbar height */
+    }
   </style>
   <script>
     function debounce(func, wait) {
@@ -711,6 +714,9 @@
         randomizeMasonrySpans();
       }, 200);
     });
+
+    // Add a class to html for gallery-masonry scroll padding
+    document.documentElement.classList.add('gallery-masonry-scroll');
   </script>
 </body>
 </html> 
