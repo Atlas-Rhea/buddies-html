@@ -25,6 +25,30 @@ if (document.getElementById('year-selector')) {
   if (yearLinks.length > 0) yearLinks[0].click();
 } 
 
+// Gallery Masonry Year Switcher
+if (document.querySelector('.timeline-scroll-container') && document.querySelector('.masonry')) {
+  const yearButtons = document.querySelectorAll('.timeline-year');
+  const masonryGroups = document.querySelectorAll('.masonry-group');
+  yearButtons.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const year = btn.textContent.trim();
+      // Toggle active class
+      yearButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      // Show only the selected year group
+      masonryGroups.forEach(group => {
+        if (group.getAttribute('data-year') === year) {
+          group.classList.remove('gallery-hidden', 'hidden');
+        } else {
+          group.classList.add('gallery-hidden');
+        }
+      });
+    });
+  });
+  // Show the latest year by default
+  if (yearButtons.length > 0) yearButtons[0].click();
+}
+
 // --- Hero Section Full Viewport Height Minus Nav Bar ---
 function setHeroHeight() {
   const nav = document.querySelector('nav');
