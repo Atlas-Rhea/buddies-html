@@ -69,9 +69,9 @@ buildStaticPage({
   sectionsDir,
 });
 
-// Build event.html
+// Build event.html using dist/index.html as the template
 buildStaticPage({
-  templatePath: path.join(__dirname, '../event.html'),
+  templatePath: path.join(__dirname, '../dist/index.html'),
   outputPath: path.join(docsDir, 'event.html'),
   sectionFiles: [
     'nav-bar.html',
@@ -81,9 +81,9 @@ buildStaticPage({
   sectionsDir,
 });
 
-// Build gallery-masonry.html
+// Build gallery-masonry.html using dist/index.html as the template
 buildStaticPage({
-  templatePath: path.join(__dirname, '../gallery-masonry.html'),
+  templatePath: path.join(__dirname, '../dist/index.html'),
   outputPath: path.join(docsDir, 'gallery-masonry.html'),
   sectionFiles: [
     'nav-bar.html',
