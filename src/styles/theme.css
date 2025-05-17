@@ -590,6 +590,7 @@ section.gallery-section {
 html, body {
   scroll-behavior: smooth;
   background: var(--clr-bg);
+  overflow-x: hidden;
 }
 
 /* --- Gallery Masonry Custom Styles (migrated from dev HTML) --- */
@@ -653,6 +654,14 @@ html, body {
   .gallery-dot {
     width: 6px;
     height: 6px;
+  }
+  nav,
+  #mobile-menu {
+    max-width: 100vw !important;
+    width: 100vw !important;
+    box-sizing: border-box;
+    left: 0 !important;
+    right: 0 !important;
   }
 }
 @media (max-width: 480px) {
