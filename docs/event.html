@@ -11,36 +11,38 @@
   <body class="bg-white text-gray-900">
     <div id="app" class="app-content-offset">
       <div id="sections">
-<nav class="flex items-center justify-between px-4 py-3 bg-white shadow max-w-[1440px] w-full mx-auto" style="background: #fff !important; background-color: #fff !important; z-index: 200; position: fixed; top: 0; left: 0; width: 100%; box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);">
-  <!-- Logo -->
-  <div class="flex items-center gap-3 min-w-0 flex-shrink">
-    <img src="assets/buddies-logo.svg" alt="The Buddies Open logo"
-      class="h-10 max-w-[100px] navshrink:h-8 navshrink:max-w-[80px] md:h-[60px] md:max-w-[140px] lg:max-w-[200px] transition-all duration-200"
-      loading="lazy" />
+<nav class="w-full bg-white shadow" style="background: #fff !important; background-color: #fff !important; z-index: 200; position: fixed; top: 0; left: 0; width: 100%; box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);">
+  <div class="flex items-center justify-between px-4 py-3 max-w-[1440px] w-full mx-auto">
+    <!-- Logo -->
+    <div class="flex items-center gap-3 min-w-0 flex-shrink">
+      <img src="assets/buddies-logo.svg" alt="The Buddies Open logo"
+        class="h-10 max-w-[100px] navshrink:h-8 navshrink:max-w-[80px] md:h-[60px] md:max-w-[140px] lg:max-w-[200px] transition-all duration-200"
+        loading="lazy" />
+    </div>
+    <!-- Hamburger for mobile -->
+    <button id="mobile-menu-toggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10" aria-label="Open menu" aria-expanded="false">
+      <span class="block w-6 h-0.5 bg-[#406c3a] mb-1"></span>
+      <span class="block w-6 h-0.5 bg-[#406c3a] mb-1"></span>
+      <span class="block w-6 h-0.5 bg-[#406c3a]"></span>
+    </button>
+    <!-- Nav links (hidden on mobile) -->
+    <div class="hidden md:flex flex-1 justify-center min-w-0">
+      <ul class="flex justify-center gap-4 lg:gap-8 text-[#5a7a5a] text-base navshrink:text-sm lg:text-lg xl:text-xl font-medium px-2 lg:px-6 min-w-0">
+        <li class="min-w-0"><a href="index.html#about-us" class="nav-link-shadow transition block max-w-full" style="text-decoration: none;">About</a></li>
+        <li class="min-w-0"><a href="event.html" class="nav-link-shadow transition whitespace-nowrap block max-w-full" style="text-decoration: none;">This Years Event</a></li>
+        <li class="min-w-0"><a href="index.html#rules" class="nav-link-shadow transition block max-w-full" style="text-decoration: none;">Rules</a></li>
+        <li class="min-w-0"><a href="index.html#champions" class="nav-link-shadow transition block max-w-full" style="text-decoration: none;">Champions</a></li>
+        <li class="min-w-0"><a href="index.html#sponsors" class="nav-link-shadow transition block max-w-full" style="text-decoration: none;">Sponsors</a></li>
+        <li class="min-w-0"><a href="gallery-masonry.html" class="nav-link-shadow transition block max-w-full" style="text-decoration: none;">Gallery</a></li>
+      </ul>
+    </div>
+    <!-- Donate button -->
+    <a href="#donate"
+      class="hidden md:flex bg-[#406c3a] text-white rounded-full px-4 py-2 items-center gap-2 font-medium shadow-md hover:bg-[#335c3a] transition min-w-0 flex-shrink min-w-[40px] navshrink:min-w-[40px] md:min-w-[100px] justify-center">
+      <span class="w-3 h-3 bg-white rounded-full inline-block"></span>
+      <span class="block max-w-full">DONATE</span>
+    </a>
   </div>
-  <!-- Hamburger for mobile -->
-  <button id="mobile-menu-toggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10" aria-label="Open menu" aria-expanded="false">
-    <span class="block w-6 h-0.5 bg-[#406c3a] mb-1"></span>
-    <span class="block w-6 h-0.5 bg-[#406c3a] mb-1"></span>
-    <span class="block w-6 h-0.5 bg-[#406c3a]"></span>
-  </button>
-  <!-- Nav links (hidden on mobile) -->
-  <div class="hidden md:flex flex-1 justify-center min-w-0">
-    <ul class="flex justify-center gap-4 lg:gap-8 text-[#5a7a5a] text-base navshrink:text-sm lg:text-lg xl:text-xl font-medium px-2 lg:px-6 min-w-0">
-      <li class="min-w-0"><a href="index.html#about-us" class="nav-link-shadow transition block max-w-full" style="text-decoration: none;">About</a></li>
-      <li class="min-w-0"><a href="event.html" class="nav-link-shadow transition whitespace-nowrap block max-w-full" style="text-decoration: none;">This Years Event</a></li>
-      <li class="min-w-0"><a href="index.html#rules" class="nav-link-shadow transition block max-w-full" style="text-decoration: none;">Rules</a></li>
-      <li class="min-w-0"><a href="index.html#champions" class="nav-link-shadow transition block max-w-full" style="text-decoration: none;">Champions</a></li>
-      <li class="min-w-0"><a href="index.html#sponsors" class="nav-link-shadow transition block max-w-full" style="text-decoration: none;">Sponsors</a></li>
-      <li class="min-w-0"><a href="gallery-masonry.html" class="nav-link-shadow transition block max-w-full" style="text-decoration: none;">Gallery</a></li>
-    </ul>
-  </div>
-  <!-- Donate button -->
-  <a href="#donate"
-    class="hidden md:flex bg-[#406c3a] text-white rounded-full px-4 py-2 items-center gap-2 font-medium shadow-md hover:bg-[#335c3a] transition min-w-0 flex-shrink min-w-[40px] navshrink:min-w-[40px] md:min-w-[100px] justify-center">
-    <span class="w-3 h-3 bg-white rounded-full inline-block"></span>
-    <span class="block max-w-full">DONATE</span>
-  </a>
 </nav>
 <!-- Mobile menu (hidden by default, toggled by hamburger) -->
 <div
