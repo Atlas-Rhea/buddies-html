@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Buddies Open HTML Prototype</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/buddies-html/assets/index-DjTejlJn.js"></script>
-    <link rel="stylesheet" crossorigin href="/buddies-html/assets/index-DqPk4ghh.css">
+    <script type="module" crossorigin src="/buddies-html/assets/index-BdxdOMzU.js"></script>
+    <link rel="stylesheet" crossorigin href="/buddies-html/assets/index-DJX7SWRf.css">
   </head>
   <body class="bg-white text-gray-900">
     <div id="app" class="app-content-offset">
@@ -89,27 +89,34 @@
     </div>
   </div>
 </section> 
-<section id="about-us" class="max-w-[1440px] mx-auto px-4 py-16 flex flex-col md:flex-row items-center justify-center gap-8">
+<section id="about-us" class="max-w-[1440px] mx-auto section-spacing-lg flex flex-col md:flex-row items-center justify-center gap-lg md:gap-xl px-lg">
   <!-- Text Column -->
-  <div class="w-full md:w-1/2 max-w-xl min-w-0 flex flex-col gap-6 text-left justify-center">
-    <h2 class="text-4xl md:text-5xl font-extrabold text-[#7ca05b] leading-tight mb-8">THE BUDDIES LEGEND</h2>
-    <p class="text-[#bdbdbd] text-lg mb-8">In 1984, the North West Devils were awarded $500 for winning the Bill Bolton Consolation Men's Hockey Championship. Excited and not knowing what to do with the bounty, we decided to put the funds towards a golf tournament and BBQ. The event was so successful it is a ritual. Nearly the entire original Devils continue to take part in the tourney (though none have ever won), much has changed. Most notably, the bachelors have become fathers making their wives and children part of the Buddies. That is what makes it special.</p>
+  <div class="w-full md:w-1/2 max-w-xl min-w-0 flex flex-col space-y-lg md:space-y-xl text-left justify-center md:pl-xl">
+    <div class="space-y-md">
+      <span class="small-label text-[#7ca05b] block">About Us</span>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-[#7ca05b] leading-tight">THE BUDDIES LEGEND</h2>
+    </div>
+    <p class="text-[#bdbdbd] text-lg leading-relaxed">In 1984, the North West Devils were awarded $500 for winning the Bill Bolton Consolation Men's Hockey Championship. Excited and not knowing what to do with the bounty, we decided to put the funds towards a golf tournament and BBQ. The event was so successful it is a ritual. Nearly the entire original Devils continue to take part in the tourney (though none have ever won), much has changed. Most notably, the bachelors have become fathers making their wives and children part of the Buddies. That is what makes it special.</p>
   </div>
   <!-- Image + Green Card Column -->
-  <div class="w-full md:w-1/2 max-w-lg min-w-0 flex flex-col items-center">
-    <div class="relative w-full h-64 sm:h-80 md:h-[480px] lg:h-[520px] xl:h-[560px] flex items-end max-w-full">
-      <!-- Green Card (Desktop) -->
-      <div class="hidden md:flex absolute left-0 -bottom-12 w-72 md:w-56 sm:w-44 bg-[#406c3a] text-white rounded-xl p-8 md:p-4 sm:p-2 shadow-lg flex-col justify-center items-center text-center text-2xl md:text-xl sm:text-base font-bold z-10" style="text-shadow: 0px 4px 4px rgba(0,0,0,0.25);">
-        32 YEARS<br />OF<br />TRADITION
+  <div class="w-full md:w-1/2 max-w-lg min-w-0 flex flex-col items-end">
+    <div class="relative w-[85%] h-64 sm:h-80 md:h-[480px] lg:h-[520px] xl:h-[560px] flex items-end">
+      <!-- Image -->
+      <div class="relative w-full h-full ml-[15%]">
+        <img src="assets/speaker.jpeg" alt="Speaker at Buddies Open" class="w-full h-full object-cover object-[center_-115px] md:object-top rounded-xl" loading="lazy" />
       </div>
-      <!-- Image: staggered right -->
-      <img src="assets/speaker.jpeg" alt="Speaker at Buddies Open" class="w-full h-full object-cover object-[center_-115px] md:object-top rounded-xl ml-10 max-w-full" loading="lazy" />
+      <!-- Green Card (Desktop) -->
+      <div class="hidden md:flex absolute left-0 -bottom-12 w-72 md:w-56 sm:w-44 bg-[#406c3a] text-white rounded-xl p-lg md:p-md sm:p-sm shadow-lg flex-col justify-center items-center text-center text-2xl md:text-xl sm:text-base font-bold z-10 space-y-xxs" style="text-shadow: 0px 4px 4px rgba(0,0,0,0.25);">
+        <span>32 YEARS</span>
+        <span>OF</span>
+        <span>TRADITION</span>
+      </div>
       <!-- Green Tag (Mobile) -->
-      <span class="absolute bottom-2 left-2 bg-[#406c3a] text-white rounded-full px-6 py-2 text-sm font-bold shadow-md z-10 md:hidden">32 YEARS OF LEGENDARY TRADITION</span>
+      <span class="absolute bottom-sm left-sm bg-[#406c3a] text-white rounded-full px-lg py-sm text-sm font-bold shadow-md z-10 md:hidden">32 YEARS OF LEGENDARY TRADITION</span>
     </div>
   </div>
 </section> 
-<section class="relative w-full max-w-[1440px] mx-auto flex flex-col items-center justify-center py-16 px-4 text-[1.25em] what-we-do-section" style="overflow:visible; font-size: 1.25em;">
+<section class="relative w-full max-w-[1440px] mx-auto flex flex-col items-center justify-center section-spacing-lg px-lg">
   <style>
     @media (max-width: 640px) {
       .what-we-do-golf-ball {
@@ -118,55 +125,91 @@
       }
     }
   </style>
-  <div class="absolute inset-0 pointer-events-none" style="opacity:0.09;overflow:visible;">
-    <img src="assets/golf_ball_transparent.png" alt="Golf Ball" class="what-we-do-golf-ball" style="width:130%;height:130%;max-width:1000px;max-height:1000px;object-fit:contain;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:0;" loading="lazy" />
+  <!-- Background Golf Ball -->
+  <div class="absolute inset-0 pointer-events-none opacity-[0.09] overflow-visible">
+    <img src="assets/golf_ball_transparent.png" alt="Golf Ball" class="what-we-do-golf-ball absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[130%] h-[130%] max-w-[1000px] max-h-[1000px] object-contain z-0" loading="lazy" />
   </div>
-  <div class="absolute inset-0 pointer-events-none opacity-25" aria-hidden="true" style="overflow:visible;width:130%;height:130%;max-width:1000px;max-height:1000px;left:50%;top:50%;transform:translate(-50%,-50%);position:absolute;">
-    <svg width="100%" height="100%" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow:visible;width:100%;height:100%;max-width:1000px;max-height:1000px;">
+  <!-- Background Circle -->
+  <div class="absolute inset-0 pointer-events-none opacity-25 overflow-visible w-[130%] h-[130%] max-w-[1000px] max-h-[1000px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+    <svg width="100%" height="100%" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="overflow-visible w-full h-full max-w-[1000px] max-h-[1000px]">
       <circle cx="720" cy="160" r="300" fill="#87A66F" />
     </svg>
   </div>
-  <div class="relative flex flex-col items-center justify-center gap-2 w-full max-w-[700px] mx-auto">
-    <span class="w-full font-bold text-xl sm:text-2xl md:text-3xl leading-tight uppercase text-[#617A43] align-top mb-2 text-center" style="font-family: 'Oxygen', sans-serif;">What we do</span>
-    <p class="text-body text-center text-[#5C5C5C]" style="font-family: var(--font-oxygen); font-size: 1.1rem;">
+  <!-- Content -->
+  <div class="relative flex flex-col items-center justify-center space-y-lg w-full max-w-[700px] mx-auto">
+    <h2 class="w-full font-bold text-xl sm:text-2xl md:text-3xl leading-tight uppercase text-[#617A43] text-center font-oxygen">What we do</h2>
+    <p class="text-body text-center text-[#5C5C5C] font-oxygen text-lg md:text-xl leading-relaxed">
       All net proceeds are collected through<br>
-      <a href="#veritas" class="text-[#406c3a] no-underline font-semibold" style="font-family: var(--font-oxygen);">VERITAS FOUNDATION</a><br>
+      <a href="#veritas" class="text-[#406c3a] no-underline font-semibold font-oxygen hover:text-[#4d8346] transition-colors">VERITAS FOUNDATION</a><br>
       and distributed to cancer related charities<br>supporting children and their families.
     </p>
   </div>
 </section> 
-<section id="rules" class="py-16 px-6 md:px-12 xl:px-32 flex justify-center items-center min-h-screen bg-white max-w-[1440px] mx-auto box-border">
-  <div class="rounded-3xl shadow-xl max-w-[1172px] w-full p-10 flex flex-col gap-10 box-border" style="background: url('assets/green-rules.svg') center/cover no-repeat;">
+<section id="rules" class="section-spacing-lg px-lg md:px-xl xl:px-2xl flex justify-center items-center min-h-screen bg-white max-w-[1440px] mx-auto">
+  <div class="rounded-3xl shadow-xl max-w-[1172px] w-full p-xl flex flex-col gap-xl" style="background: url('assets/green-rules.svg') center/cover no-repeat;">
     <!-- Row 1: Tournament Rules (left), Image (right) -->
-    <div class="flex flex-col md:flex-row gap-8 items-stretch">
-      <div class="flex-1 flex flex-col gap-6 order-1 md:order-1 justify-between">
-        <h2 class="text-3xl md:text-4xl font-extrabold text-[#fff] mt-10 mb-8">TOURNAMENT RULES OF PLAY <span class='block text-lg font-normal'>(Read once, break often)</span></h2>
-        <ol class="list-decimal list-inside space-y-2 text-white text-lg mb-6" start="1">
-          <li><b>Best Ball Format:</b><br>Each player hits from the spot of the previous "best" shot, as chosen by the team. Democracy in action—sort of.</li>
-          <li><b>Team Scoring:</b><br>Record one team score per hole. Lowest total wins. Bragging rights included.</li>
-          <li><b>Dress Code:</b><br>You can follow golf rules or position yourself to win the coveted Best Dressed, you choose.</li>
-          <li><b>Mulligans Are Fiction:</b><br>Mr. Mulligan was not invited. No do-overs. Play it where it lies… even if it's a flowerbed.</li>
-          <li><b>No Gimmies:</b><br>Putt it out. The Golf Gods are watching—and they're petty.</li>
+    <div class="flex flex-col md:flex-row gap-xl items-stretch">
+      <div class="flex-1 flex flex-col space-y-lg order-1 md:order-1">
+        <div class="space-y-md">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white">TOURNAMENT RULES OF PLAY</h2>
+          <p class="text-lg font-normal text-white">(Read once, break often)</p>
+        </div>
+        <ol class="list-decimal list-inside space-y-md text-lg text-white" start="1">
+          <li class="space-y-xxs">
+            <span class="font-bold">Best Ball Format:</span>
+            <p class="ml-md text-white">Each player hits from the spot of the previous "best" shot, as chosen by the team. Democracy in action—sort of.</p>
+          </li>
+          <li class="space-y-xxs">
+            <span class="font-bold">Team Scoring:</span>
+            <p class="ml-md text-white">Record one team score per hole. Lowest total wins. Bragging rights included.</p>
+          </li>
+          <li class="space-y-xxs">
+            <span class="font-bold">Dress Code:</span>
+            <p class="ml-md text-white">You can follow golf rules or position yourself to win the coveted Best Dressed, you choose.</p>
+          </li>
+          <li class="space-y-xxs">
+            <span class="font-bold">Mulligans Are Fiction:</span>
+            <p class="ml-md text-white">Mr. Mulligan was not invited. No do-overs. Play it where it lies… even if it's a flowerbed.</p>
+          </li>
+          <li class="space-y-xxs">
+            <span class="font-bold">No Gimmies:</span>
+            <p class="ml-md text-white">Putt it out. The Golf Gods are watching—and they're petty.</p>
+          </li>
         </ol>
       </div>
       <div class="flex-1 flex items-stretch order-2 md:order-2">
-        <img src="assets/rules-1.jpeg" alt="Golfers group 1" class="rounded-xl w-full h-full object-cover min-h-[300px]" loading="lazy" />
+        <img src="assets/rules-1.jpeg" alt="Golfers group 1" class="rounded-xl w-full h-full object-cover min-h-[300px] hover:scale-[1.02] transition-transform" loading="lazy" />
       </div>
     </div>
     <!-- Row 2: Image (left), Rules of Play (right) -->
-    <div class="flex flex-col md:flex-row gap-8 items-stretch">
-      <div class="flex-1 flex flex-col gap-6 order-1 md:order-2 justify-between">
-        <ol class="list-decimal list-inside space-y-2 text-white text-lg mb-6" start="6">
-          <li><b>Out of Bounds = Out of Bounds:</b><br>Unless it's faster, funnier, or there's a clear path through the woods. Use judgment. Or don't.</li>
-          <li><b>Cart Speed Limits Apply:</b><br>Drive responsibly. We've hired invisible speed enforcement. You've been warned.</li>
-          <li><b>Lost Ball Protocol:</b><br>If you can't find it in 90 seconds, it's gone. Declare it lost, curse the squirrels, move on.</li>
-          <li><b>Cheating Policy:</b><br>Cheating is strictly prohibited—unless it's clever, and no one finds out. In that case, we admire the hustle.</li>
-          <li><b>Mandatory Fun Clause:</b><br>If you're not having fun, that's a you problem. Adjust attitude, refill beverage, and carry on.</li>
-        </ol>
-        <h2 class="text-white text-5xl font-bold mt-2 mb-0">Good Luck!</h2>
-      </div>
+    <div class="flex flex-col md:flex-row gap-xl items-stretch">
       <div class="flex-1 flex items-stretch order-2 md:order-1">
-        <img src="assets/rules-2.jpeg" alt="Golfers group 2" class="rounded-xl w-full h-full object-cover min-h-[300px]" loading="lazy" />
+        <img src="assets/rules-2.jpeg" alt="Golfers group 2" class="rounded-xl w-full h-full object-cover min-h-[300px] hover:scale-[1.02] transition-transform" loading="lazy" />
+      </div>
+      <div class="flex-1 flex flex-col space-y-lg order-1 md:order-2">
+        <ol class="list-decimal list-inside space-y-md text-lg text-white" start="6">
+          <li class="space-y-xxs">
+            <span class="font-bold">Out of Bounds = Out of Bounds:</span>
+            <p class="ml-md text-white">Unless it's faster, funnier, or there's a clear path through the woods. Use judgment. Or don't.</p>
+          </li>
+          <li class="space-y-xxs">
+            <span class="font-bold">Cart Speed Limits Apply:</span>
+            <p class="ml-md text-white">Drive responsibly. We've hired invisible speed enforcement. You've been warned.</p>
+          </li>
+          <li class="space-y-xxs">
+            <span class="font-bold">Lost Ball Protocol:</span>
+            <p class="ml-md text-white">If you can't find it in 90 seconds, it's gone. Declare it lost, curse the squirrels, move on.</p>
+          </li>
+          <li class="space-y-xxs">
+            <span class="font-bold">Cheating Policy:</span>
+            <p class="ml-md text-white">Cheating is strictly prohibited—unless it's clever, and no one finds out. In that case, we admire the hustle.</p>
+          </li>
+          <li class="space-y-xxs">
+            <span class="font-bold">Mandatory Fun Clause:</span>
+            <p class="ml-md text-white">If you're not having fun, that's a you problem. Adjust attitude, refill beverage, and carry on.</p>
+          </li>
+        </ol>
+        <h2 class="text-white text-4xl md:text-5xl font-bold">Good Luck!</h2>
       </div>
     </div>
   </div>
@@ -699,24 +742,26 @@
     </div>
   </div>
 </section> 
-<section class="w-full py-10 bg-white max-w-[1440px] mx-auto">
-  <div class="flex items-center justify-center mb-8">
+<section class="w-full max-w-[1440px] mx-auto section-spacing-lg px-lg bg-white">
+  <!-- Section Header -->
+  <div class="flex items-center justify-center space-y-lg">
     <div class="hidden md:block flex-1 h-px bg-gradient-to-r from-sky-400 via-green-500 to-orange-500 max-w-[40%]" aria-hidden="true"></div>
-    <h2 class="mx-6 text-2xl md:text-3xl font-bold text-green-900 tracking-wide text-center whitespace-nowrap mb-12">TRUSTED PARTNERS</h2>
+    <h2 class="mx-xl text-2xl md:text-3xl font-bold text-[#406c3a] tracking-wide text-center whitespace-nowrap">TRUSTED PARTNERS</h2>
     <div class="hidden md:block flex-1 h-px bg-gradient-to-l from-sky-400 via-green-500 to-orange-500 max-w-[40%]" aria-hidden="true"></div>
   </div>
-  <div class="max-w-full mx-auto px-0 md:px-2">
-    <div class="grid grid-cols-2 grid-rows-5 md:grid-cols-5 md:grid-rows-2 gap-4 justify-center items-center justify-items-center mx-auto min-w-0 max-w-full overflow-hidden">
-      <img src="assets/t_Admore.png" alt="Admore Financial Services" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
-      <img src="assets/t_BGS.png" alt="BGS Chartered Professional Accountants" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
-      <img src="assets/t_Conduit Law.png" alt="Conduit Law" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
-      <img src="assets/t_Doxim.png" alt="Doxim" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
-      <img src="assets/t_ENEL.png" alt="ENEL" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
-      <img src="assets/t_Fogler Rubinoff.png" alt="Fogler Rubinoff" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
-      <img src="assets/t_RBC.png" alt="RBC Wealth Management" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
-      <img src="assets/t_USANA.png" alt="USANA" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
-      <img src="assets/t_Watson and associates.png" alt="Watson and Associates" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
-      <img src="assets/t_Zinati Kay.png" alt="Zinati Kay" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
+  <!-- Partners Grid -->
+  <div class="mt-xl">
+    <div class="grid grid-cols-2 grid-rows-5 md:grid-cols-5 md:grid-rows-2 gap-lg justify-center items-center justify-items-center mx-auto">
+      <img src="assets/t_Admore.png" alt="Admore Financial Services" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain hover:scale-105 transition-transform" loading="lazy" />
+      <img src="assets/t_BGS.png" alt="BGS Chartered Professional Accountants" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain hover:scale-105 transition-transform" loading="lazy" />
+      <img src="assets/t_Conduit Law.png" alt="Conduit Law" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain hover:scale-105 transition-transform" loading="lazy" />
+      <img src="assets/t_Doxim.png" alt="Doxim" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain hover:scale-105 transition-transform" loading="lazy" />
+      <img src="assets/t_ENEL.png" alt="ENEL" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain hover:scale-105 transition-transform" loading="lazy" />
+      <img src="assets/t_Fogler Rubinoff.png" alt="Fogler Rubinoff" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain hover:scale-105 transition-transform" loading="lazy" />
+      <img src="assets/t_RBC.png" alt="RBC Wealth Management" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain hover:scale-105 transition-transform" loading="lazy" />
+      <img src="assets/t_USANA.png" alt="USANA" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain hover:scale-105 transition-transform" loading="lazy" />
+      <img src="assets/t_Watson and associates.png" alt="Watson and Associates" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain hover:scale-105 transition-transform" loading="lazy" />
+      <img src="assets/t_Zinati Kay.png" alt="Zinati Kay" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain hover:scale-105 transition-transform" loading="lazy" />
     </div>
   </div>
 </section> 
