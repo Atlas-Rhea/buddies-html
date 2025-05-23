@@ -1,0 +1,29 @@
+---
+description: run on new files and whenever files are edited
+globs: 
+alwaysApply: false
+---
+# File: .cursor/rules/require-comments.rule
+---
+# A human-readable name for the rule
+name: require-doc-comments
+
+# When to run: on new files and whenever files are edited
+on:
+  events:
+    - file_added
+    - file_modified
+
+# Which files to apply to (glob syntax)
+match:
+  path: "**/*.{js,ts,py,java,go,rb}"
+  # look for functions or classes in the code
+  pattern: "(class|def|function)\\s+\\w+"
+
+# What to ask the AI to do
+action:
+  # inject this snippet right before the matched line
+  insert_before: |
+    # Description: <briefly describe what this $1 does>
+    # Author: $USER
+

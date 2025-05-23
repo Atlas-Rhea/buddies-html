@@ -1,0 +1,113 @@
+---
+description: Automatically invoke the appropriate Browser Tools MCP call for debugging, inspection, and audit tasks in a web context
+globs: 
+alwaysApply: false
+---
+id: use-browser-tools-mcp
+    description: "Automatically invoke the appropriate Browser Tools MCP call for debugging, inspection, and audit tasks in a web context."
+    when:
+      in_environment: browser
+      plugins_available:
+        - browser-tools-mcp
+    cases:
+      # 1. JavaScript errors or console investigation
+      - match_patterns:
+          - "error"
+          - "console"
+          - "uncaught"
+          - "exception"
+        then:
+          set_tool: browser-tools-mcp.getConsoleLogs
+
+      # 2. Network/API request diagnostics
+      - match_patterns:
+          - "fetch"
+          - "API"
+          - "network"
+          - "request"
+        then:
+          set_tool: browser-tools-mcp.getNetworkRequests
+
+      # 3. DOM layout & style inspection
+      - match_patterns:
+          - "layout"
+          - "CSS"
+          - "style"
+          - "position"
+          - "render"
+        then:
+          set_tool: browser-tools-mcp.getElement
+
+      # 4. Visual snapshots
+      - match_patterns:
+          - "screenshot"
+          - "visual"
+          - "before"
+          - "after"
+        then:
+          set_tool: browser-tools-mcp.takeScreenshot
+
+      # 5. State & storage review
+      - match_patterns:
+          - "localStorage"
+          - "sessionStorage"
+          - "cookie"
+        then:
+          set_tool: browser-tools-mcp.getPageState
+
+      # 6. Accessibility checks
+      - match_patterns:
+          - "accessibility"
+          - "ARIA"
+          - "a11y"
+        then:
+          set_tool: browser-tools-mcp.runAccessibilityAudit
+
+      # 7. Performance audits
+      - match_patterns:
+          - "performance"
+          - "FCP"
+          - "TTI"
+          - "Lighthouse"
+        then:
+          set_tool: browser-tools-mcp.runPerformanceAudit
+
+      # 8. SEO best-practices checks
+      - match_patterns:
+          - "SEO"
+          - "meta"
+          - "heading"
+        then:
+          set_tool: browser-tools-mcp.runSEOBestPractices
+
+      # 9. Security audit
+      - match_patterns:
+          - "security"
+          - "vulnerability"
+          - "mixed content"
+        then:
+          set_tool: browser-tools-mcp.runSecurityAudit
+
+      # 10. Simulated user interaction
+      - match_patterns:
+          - "click"
+          - "type"
+          - "fill"
+          - "submit"
+        then:
+          set_tool: browser-tools-mcp.clickElement
+
+      # 11. Navigation & reload
+      - match_patterns:
+          - "navigate"
+          - "reload"
+          - "redirect"
+        then:
+          set_tool: browser-tools-mcp.navigateTo
+
+    default:
+      # Fallback lightweight debug
+      set_tool: browser-tools-mcp.getConsoleLogs
+      priority: 10
+
+      if browser-tools mcp is not responding, run this in command prompt: npx @agentdeskai/browser-tools-server@latest

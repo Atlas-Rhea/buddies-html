@@ -1,0 +1,51 @@
+---
+description: Terminal Command Rules for Windows (PowerShell-Safe & CMD-Compatible)
+globs: 
+alwaysApply: false
+---
+##  Terminal Command Rules for Windows (PowerShell-Safe & CMD-Compatible)
+
+1. **NEVER use PowerShell-specific syntax** in terminal suggestions.  
+   Always assume the terminal defaults to PowerShell unless explicitly set to Bash.
+
+2. **Use CMD-compatible syntax** for all commands and chaining unless explicitly targeting a Bash shell (e.g. Git Bash, WSL).
+
+3. Use standard Windows CMD commands like:
+   - `dir`, `type`, `copy`, `move`, `del`, `cls`, etc.
+
+4. For package commands (`npm`, `yarn`, etc), **wrap chained commands in `cmd /c ""`** to ensure compatibility:
+   ```powershell
+   cmd /c "cd my-folder && npm run dev"
+   ```
+
+5. **Avoid PowerShell-specific syntax**, including:
+   - `$env:VARIABLE` → use `%VARIABLE%`
+   - `$_`, `| Out-File`, `-ErrorAction`, etc.
+
+6. When chaining multiple commands, **DO NOT use `&` or `&&` directly in PowerShell**.  
+   Always wrap them like this:
+   ```powershell
+   cmd /c "taskkill /F /IM node.exe && cd songscribe && npm run dev"
+   ```
+
+7. Use **Windows-style paths** with backslashes:
+   ```
+   C:\Users\YourName\Projects\SongScribe
+   ```
+
+8. For conditional execution, **avoid PowerShell's `$?` logic**.  
+   Either split into multiple lines or wrap logic in a `.cmd`/`.bat` file.
+
+9. For loops or batching, use CMD-style `for` syntax—not PowerShell `foreach`.
+
+10. Use `findstr` instead of PowerShell's `Select-String` for output filtering.
+
+11. Use `>` and `>>` for output redirection, never `Out-File`.
+
+12. For advanced logic (like JSON manipulation), suggest using:
+   - **Node.js scripts**
+   - **External CLI tools**
+   - Avoid inline PowerShell scripting altogether.
+
+13. When generating command suggestions for Windows, **default to CMD-style syntax wrapped in `cmd /c ""`** unless user explicitly prefers bash.
+

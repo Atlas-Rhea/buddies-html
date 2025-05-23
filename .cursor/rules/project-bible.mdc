@@ -1,0 +1,55 @@
+---
+description: run when completing work or uncertain about project's goals, architecture, or terminology or If you still don’t know the next action
+globs: 
+alwaysApply: false
+---
+---
+description: Maintain a canonical project Bible and sync with Taskmaster for contextual awareness and reproducibility.
+alwaysApply: true
+---
+
+# 📖 Project Bible Discipline + Taskmaster Integration
+
+### 1 · When to **read** the Bible
+- If unsure about project goals, architecture, naming, or terminology, **first read `PROJECT_BIBLE.md`**.
+- If uncertain what to do next, check the active Taskmaster board:
+  - Run: `taskmaster list --pending --sort=priority,due`
+  - Or open your visual board.
+
+> ⚠️ If no Bible exists, **create a new `PROJECT_BIBLE.md`** with these initial sections:
+> - Overview  
+> - Recent Changes  
+> - Architecture  
+> - Core Components  
+> - User Flows  
+> - External Dependencies
+
+---
+
+### 2 · When to **write** to the Bible  
+Append a dated entry (ISO 8601) under “Recent Changes” in `PROJECT_BIBLE.md` after any **significant development event**:
+
+| Field | Description |
+|-------|-------------|
+| **What & Why** | One-line summary of change and reason |
+| **Code** | Essential snippets (functions, models, hooks) |
+| **File Structure** | Any new or refactored folders/files |
+| **Visuals** | Flowcharts, diagrams, ASCII sketches |
+| **Dependencies** | New libs, packages, scripts, env vars |
+
+---
+
+### 3 · Bible Hygiene
+- Append only—preserve history for other agents
+- Maintain a clear section hierarchy
+- If the Bible is missing or damaged, **propose regeneration** from repo context and team memory
+
+---
+
+### 4 · LLM-to-LLM Ethos
+Write and maintain the Bible so that **another LLM agent could fully rebuild the app** from just the repo and `PROJECT_BIBLE.md`.
+
+---
+
+@PROJECT_BIBLE.md
+@taskmaster

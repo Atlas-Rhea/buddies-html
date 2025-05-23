@@ -15,9 +15,11 @@
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-behavior: smooth;
-  height: calc(5 * 80px + 4 * 0.75rem); /* 5 rows + 4 gaps */
-  min-height: unset;
-  max-height: unset;
+  gap: 0;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  padding-bottom: 2rem; /* Space for dots */
+  width: 100%;
 }
 .masonry-group {
   display: grid;

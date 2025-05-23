@@ -53,7 +53,7 @@
 p,
 .nav-link,
 .footer-text {
-  font-family: var(--font-poppins);
+  font-family: 'Poppins';
   font-size: 1rem; /* text-base */
   line-height: 1.6; /* leading-relaxed */
   color: var(--color-text);
@@ -591,6 +591,13 @@ html, body {
   scroll-behavior: smooth;
   background: var(--clr-bg);
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#app {
+  flex-grow: 1;
 }
 
 /* --- Gallery Masonry Custom Styles (migrated from dev HTML) --- */

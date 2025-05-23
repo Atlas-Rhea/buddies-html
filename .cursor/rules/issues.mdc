@@ -1,0 +1,46 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: Promote any bulleted suggestions in assistant output as high-priority Task-Master tasks  
+globs: .cursor/rules/*.mdc  
+alwaysApply: true  
+---
+
+- **Trigger on any bulleted line**  
+  - Matches lines beginning with `- ` or `* ` anywhere in the assistant’s output  
+  - Catches suggestions or “issues” even if no literal phrase like “understand the issue” appears  
+
+- **Extract and promote each bullet**  
+  - Grep for `^[-*] ` to find all bullets  
+  - Strip the leading marker to get the clean description  
+  - Run `task-master add --title="<desc>" --priority=high` for each  
+
+- **Append to a durable log**  
+  - Write a timestamped entry to `.cursor/taskmaster_issues.log`  
+  - Records exactly which bullets were promoted  
+
+- **Example rule implementation**  
+  ```mdc
+  rule PromoteBulletedProblems
+  when assistant.output.matches("(?m)^[-*] .+")
+  then
+    # 1) Extract every bulleted line and add as high-priority task
+    shell("echo \"$ASSISTANT_OUTPUT\" \\
+      | grep -E '^[-*] ' \\
+      | sed 's/^[-*] //' \\
+      | while read problem; do \\
+          task-master add --title=\"$problem\" --priority=high; \\
+        done")
+    # 2) Log what was promoted
+    shell("echo \"$(date '+%Y-%m-%d %H:%M:%S') Promoted bullets: \\
+      $(echo \"$ASSISTANT_OUTPUT\" \\
+         | grep -E '^[-*] ' \\
+         | sed 's/^[-*] //' \\
+         | paste -sd';' -)\" \\
+      >> .cursor/taskmaster_issues.log")
+  end
+
+

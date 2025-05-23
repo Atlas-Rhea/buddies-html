@@ -1,0 +1,80 @@
+---
+description: Apply this rule when making UI/UX decisions to ensure designs align with Steve Jobs' principles of simplicity, clarity, and delight.
+globs: 
+alwaysApply: false
+---
+---
+description: Universal UI/UX “Steve Jobs” Quality Gate — powered by LiftKit CSS
+alwaysApply: true
+---
+
+# 🍏 The Steve Jobs Test (LiftKit Edition)
+
+> **Prompt:** *Before you ship any UI, ask:* **“Would Steve Jobs nod in approval?”**
+
+---
+
+## 1 · Core Principles
+| Pillar           | Quick Check                                                                                                   |
+| ---------------- | -------------------------------------------------------------------------------------------------------------- |
+| **Simplicity**   | Can a first-time user grok it instantly? Remove one more control if possible.                                 |
+| **Clarity**      | Zero ambiguity in labels, icons, and affordances.                                                             |
+| **Delight**      | Does a tiny moment (animation, haptic, sound) spark joy without gimmickry?                                    |
+| **Craftsmanship**| Pixel-perfect alignment and **oddly satisfying spacing** (use LiftKit’s rhythm utilities to nail the feel).   |
+| **Focus**        | Highlight the primary action; hide advanced options until they’re needed.                                     |
+| **Consistency**  | Rely on design tokens and **LiftKit CSS** patterns (`lk-stack`, `lk-cluster`, etc.).                          |
+
+*(If spacing doesn’t feel “just right,” refine until it’s borderline obsessive.)*
+
+---
+
+## 2 · LiftKit CSS Usage ✨
+> **Dependency:** `npm i @chainlift/liftkit-css` (or Yarn/PNPM equivalent)
+
+| Need                     | LiftKit Utility / Pattern  | Example |
+|--------------------------|----------------------------|---------|
+| Vertical rhythm          | `lk-stack`                 | `<div class=\"lk-stack gap-4\">…` |
+| Inline clusters (chips)  | `lk-cluster`              | `<ul class=\"lk-cluster gap-2\">…` |
+| Fluid container widths   | `lk-container`             | `<main class=\"lk-container\">…` |
+| Centered content         | `lk-center`                | `<section class=\"lk-center\">…` |
+| Responsive grid          | `lk-grid`                  | `<div class=\"lk-grid cols@md-12\">…` |
+| Utility tokens           | `lk-bg-primary-500`, `lk-text-muted` | |
+
+**Rule of thumb:** before adding custom CSS, check whether LiftKit already solves it.
+
+---
+
+## 3 · Inspiration Gallery 📚
+| App (Platform) | What to Notice & Emulate |
+| -------------- | ------------------------ |
+| **Bear Notes** | Minimal chrome, fluid sidebar reveal, hashtag tagging. |
+| **Things 3**   | Clear hierarchy, natural language scheduling, magic-circle add button. |
+| **iA Writer**  | Mono-column focus, subtle typewriter scroll. |
+| **Heroicons + LiftKit** | Pair crisp icons with utility classes for quick prototypes. |
+
+Use these benchmarks; if your design isn’t on par, refine it.
+
+---
+
+## 4 · When to Apply
+- **beforeCodeGeneration** – right before Cursor emits UI code.
+- **beforeResponding** – before merging a UI-centric PR or design explanation.
+
+---
+
+## 5 · Workflow
+1. Run the Jobs Test checklist.  
+2. If any pillar fails, *refine* or ask for guidance.  
+3. Log major UI/UX decisions in `PROJECT_BIBLE.md` under **“Recent Changes”** (include screenshots or mermaid/ASCII diagrams where useful).  
+4. Reference LiftKit classes in code snippets unless genuinely impossible.
+
+---
+
+## 6 · Output Style
+When presenting UI code or mockups, add a footer note like:
+✅ Steve Jobs Test passed — LiftKit CSS applied & spacing feels oddly satisfying.
+
+---
+
+@PROJECT_BIBLE.md  
+@docs/ui_guidelines.md

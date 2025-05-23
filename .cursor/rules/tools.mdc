@@ -1,0 +1,21 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+rules:
+  - id: ensure_tool_usage
+    description: |
+      Whenever the user or the assistant refers to logs, code files, errors, or any
+      diagnostic task, Cursor MUST invoke the appropriate MCP tool (file_open,
+      file_search, mcp.fetch, etc.) before speculating.
+    when:
+      or:
+        - user_message_contains: ["error", "log", "stack trace", "trace", ".e2e.test.ts"]
+        - assistant_message_contains: ["I’ll look", "I need to see", "the logs"]
+    then:
+      - action: require_tool_call
+        tools: ["file_open", "file_search", "mcp.fetch"]
+        message: |
+          You’ve mentioned an error or log– you must call a tool to inspect the
+          actual content before giving your analysis.
