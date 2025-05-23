@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Buddies Open HTML Prototype</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/buddies-html/assets/index-C-5aQH9y.js"></script>
-    <link rel="stylesheet" crossorigin href="/buddies-html/assets/index-CV9JvQDt.css">
+    <script type="module" crossorigin src="/buddies-html/assets/index-BPLfHFGq.js"></script>
+    <link rel="stylesheet" crossorigin href="/buddies-html/assets/index-CuRE4zjN.css">
   </head>
   <body class="bg-white text-gray-900">
     <div id="app" class="app-content-offset">
@@ -174,16 +174,21 @@
   <div class="w-full max-w-3xl mx-auto mt-8">
     <div class="rounded-xl shadow-lg overflow-hidden mb-8 border-2 border-[#406c3a] bg-white">
       <!-- Year Selector Bar (Green, now inside card) -->
-      <nav id="year-selector" class="bg-[#406c3a] px-2 flex flex-wrap justify-center items-center gap-0" style="min-height:48px;">
-        <span class="year-link cursor-pointer px-4 py-2 text-white text-base md:text-lg font-semibold opacity-80" data-year="2024">2024</span>
-        <span class="year-link cursor-pointer px-4 py-2 text-white text-base md:text-lg font-semibold opacity-80" data-year="2023">2023</span>
-        <span class="year-link cursor-pointer px-4 py-2 text-white text-base md:text-lg font-semibold opacity-80" data-year="2022">2022</span>
-        <span class="year-link cursor-pointer px-4 py-2 text-white text-base md:text-lg font-semibold opacity-80" data-year="2021">2021</span>
-        <span class="year-link cursor-pointer px-4 py-2 text-white text-base md:text-lg font-semibold opacity-80" data-year="2020">2020</span>
-        <span class="year-link cursor-pointer px-4 py-2 text-white text-base md:text-lg font-semibold opacity-80" data-year="2019">2019</span>
-        <span class="year-link cursor-pointer px-4 py-2 text-white text-base md:text-lg font-semibold opacity-80" data-year="2018">2018</span>
-        <span class="year-link cursor-pointer px-4 py-2 text-white text-base md:text-lg font-semibold opacity-80" data-year="2017">2017</span>
-        <span class="year-link cursor-pointer px-4 py-2 text-white text-base md:text-lg font-semibold opacity-80" data-year="2016">2016</span>
+      <nav id="year-selector" class="bg-[#406c3a] flex items-center overflow-hidden" style="min-height:48px;">
+        <!-- Year links container -->
+        <div class="year-container flex-1 overflow-x-auto flex items-center justify-center px-4" style="-webkit-overflow-scrolling: touch;">
+          <div class="flex items-center gap-4 min-w-fit">
+            <span class="year-link cursor-pointer py-2 text-white text-lg font-semibold opacity-80 whitespace-nowrap" data-year="2024"><span class="hidden md:inline">20</span>24</span>
+            <span class="year-link cursor-pointer py-2 text-white text-lg font-semibold opacity-80 whitespace-nowrap" data-year="2023"><span class="hidden md:inline">20</span>23</span>
+            <span class="year-link cursor-pointer py-2 text-white text-lg font-semibold opacity-80 whitespace-nowrap" data-year="2022"><span class="hidden md:inline">20</span>22</span>
+            <span class="year-link cursor-pointer py-2 text-white text-lg font-semibold opacity-80 whitespace-nowrap" data-year="2021"><span class="hidden md:inline">20</span>21</span>
+            <span class="year-link cursor-pointer py-2 text-white text-lg font-semibold opacity-80 whitespace-nowrap" data-year="2020"><span class="hidden md:inline">20</span>20</span>
+            <span class="year-link cursor-pointer py-2 text-white text-lg font-semibold opacity-80 whitespace-nowrap" data-year="2019"><span class="hidden md:inline">20</span>19</span>
+            <span class="year-link cursor-pointer py-2 text-white text-lg font-semibold opacity-80 whitespace-nowrap" data-year="2018"><span class="hidden md:inline">20</span>18</span>
+            <span class="year-link cursor-pointer py-2 text-white text-lg font-semibold opacity-80 whitespace-nowrap" data-year="2017"><span class="hidden md:inline">20</span>17</span>
+            <span class="year-link cursor-pointer py-2 text-white text-lg font-semibold opacity-80 whitespace-nowrap" data-year="2016"><span class="hidden md:inline">20</span>16</span>
+          </div>
+        </div>
       </nav>
       <div class="px-6 py-3">
         <div id="champions-list" class="px-6 py-6 text-[#444] text-lg rounded-xl">
@@ -437,6 +442,23 @@
       opacity: 1;
       text-decoration: none;
     }
+    /* Hide scrollbar but keep functionality */
+    .year-container::-webkit-scrollbar {
+      display: none;
+    }
+    .year-container {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      scroll-behavior: smooth;
+    }
+    @media (max-width: 480px) {
+      .year-container {
+        justify-content: flex-start;
+      }
+      .year-link {
+        font-size: 1rem;
+      }
+    }
     /* Golf Trophy Image Styling */
     .golf-trophy-img {
       width: 12.22rem;
@@ -461,6 +483,16 @@
       }
     }
   </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.querySelector('.year-container');
+      
+      if (container) {
+        // Add smooth scrolling behavior
+        container.style.scrollBehavior = 'smooth';
+      }
+    });
+  </script>
 </section> 
 <section id="sponsors" class="py-16 px-4 bg-[#f7f7f7] max-w-[1440px] mx-auto border border-gray-200 2xl:rounded-lg">
   <h2 class="text-4xl md:text-5xl font-extrabold text-[#406c3a] text-center mb-12">SPONSORS</h2>
@@ -494,17 +526,17 @@
     <div class="hidden md:block flex-1 h-px bg-gradient-to-l from-sky-400 via-green-500 to-orange-500 max-w-[40%]" aria-hidden="true"></div>
   </div>
   <div class="max-w-full mx-auto px-0 md:px-2">
-    <div class="grid grid-cols-2 grid-rows-5 md:grid-cols-10 md:grid-rows-1 gap-4 justify-center items-center justify-items-center mx-auto min-w-0 max-w-full overflow-hidden">
-      <img src="assets/trusted-1.png" alt="Partner 1" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
-      <img src="assets/trusted-2.png" alt="Partner 2" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
-      <img src="assets/trusted-3.png" alt="Partner 3" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
-      <img src="assets/trusted-4.png" alt="Partner 4" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
-      <img src="assets/trusted-5.png" alt="Partner 5" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
-      <img src="assets/trusted-6.png" alt="Partner 6" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
-      <img src="assets/trusted-7.png" alt="Partner 7" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
-      <img src="assets/trusted-8.png" alt="Partner 8" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
-      <img src="assets/trusted-9.png" alt="Partner 9" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
-      <img src="assets/trusted-10.png" alt="Partner 10" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
+    <div class="grid grid-cols-2 grid-rows-5 md:grid-cols-5 md:grid-rows-2 gap-4 justify-center items-center justify-items-center mx-auto min-w-0 max-w-full overflow-hidden">
+      <img src="assets/t_Admore.png" alt="Admore Financial Services" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
+      <img src="assets/t_BGS.png" alt="BGS Chartered Professional Accountants" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
+      <img src="assets/t_Conduit Law.png" alt="Conduit Law" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
+      <img src="assets/t_Doxim.png" alt="Doxim" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
+      <img src="assets/t_ENEL.png" alt="ENEL" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
+      <img src="assets/t_Fogler Rubinoff.png" alt="Fogler Rubinoff" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
+      <img src="assets/t_RBC.png" alt="RBC Wealth Management" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
+      <img src="assets/t_USANA.png" alt="USANA" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
+      <img src="assets/t_Watson and associates.png" alt="Watson and Associates" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
+      <img src="assets/t_Zinati Kay.png" alt="Zinati Kay" class="h-20 md:h-28 lg:h-32 xl:h-36 w-auto object-contain flex-1 min-w-0 max-w-full" loading="lazy" />
     </div>
   </div>
 </section> 
