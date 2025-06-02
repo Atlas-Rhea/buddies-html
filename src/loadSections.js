@@ -2,9 +2,9 @@
 const sectionFiles = [
   'nav-bar.html',
   'hero.html',
-  // 'join-us.html',
-  'about-us.html',
+  'join-us.html',
   'what-we-do.html',
+  'about-us.html',
   'rules.html',
   'champions.html',
   'sponsors.html',

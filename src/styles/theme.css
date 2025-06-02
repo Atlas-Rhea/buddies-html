@@ -1,4 +1,5 @@
 @import './fonts.css';
+@import './spacing.css';
 :root {
   --font-oxygen: 'Oxygen', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   --font-poppins: 'Poppins', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;

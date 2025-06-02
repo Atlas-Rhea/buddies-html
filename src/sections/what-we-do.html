@@ -1,4 +1,4 @@
-<section class="relative w-full max-w-[1440px] mx-auto flex flex-col items-center justify-center py-16 px-4 text-[1.25em] what-we-do-section" style="overflow:visible; font-size: 1.25em;">
+<section class="relative w-full max-w-[1440px] mx-auto flex flex-col items-center justify-center section-spacing-lg px-lg">
   <style>
     @media (max-width: 640px) {
       .what-we-do-golf-ball {
@@ -7,19 +7,22 @@
       }
     }
   </style>
-  <div class="absolute inset-0 pointer-events-none" style="opacity:0.09;overflow:visible;">
-    <img src="assets/golf_ball_transparent.png" alt="Golf Ball" class="what-we-do-golf-ball" style="width:130%;height:130%;max-width:1000px;max-height:1000px;object-fit:contain;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:0;" loading="lazy" />
+  <!-- Background Golf Ball -->
+  <div class="absolute inset-0 pointer-events-none opacity-[0.09] overflow-visible">
+    <img src="assets/golf_ball_transparent.png" alt="Golf Ball" class="what-we-do-golf-ball absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[130%] h-[130%] max-w-[1000px] max-h-[1000px] object-contain z-0" loading="lazy" />
   </div>
-  <div class="absolute inset-0 pointer-events-none opacity-25" aria-hidden="true" style="overflow:visible;width:130%;height:130%;max-width:1000px;max-height:1000px;left:50%;top:50%;transform:translate(-50%,-50%);position:absolute;">
-    <svg width="100%" height="100%" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow:visible;width:100%;height:100%;max-width:1000px;max-height:1000px;">
+  <!-- Background Circle -->
+  <div class="absolute inset-0 pointer-events-none opacity-25 overflow-visible w-[130%] h-[130%] max-w-[1000px] max-h-[1000px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+    <svg width="100%" height="100%" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="overflow-visible w-full h-full max-w-[1000px] max-h-[1000px]">
       <circle cx="720" cy="160" r="300" fill="#87A66F" />
     </svg>
   </div>
-  <div class="relative flex flex-col items-center justify-center gap-2 w-full max-w-[700px] mx-auto">
-    <span class="w-full font-bold text-xl sm:text-2xl md:text-3xl leading-tight uppercase text-[#617A43] align-top mb-2 text-center" style="font-family: 'Oxygen', sans-serif;">What we do</span>
-    <p class="text-body text-center text-[#5C5C5C]" style="font-family: var(--font-oxygen); font-size: 1.1rem;">
+  <!-- Content -->
+  <div class="relative flex flex-col items-center justify-center space-y-lg w-full max-w-[700px] mx-auto">
+    <h2 class="w-full font-bold text-xl sm:text-2xl md:text-3xl leading-tight uppercase text-[#617A43] text-center font-oxygen">What we do</h2>
+    <p class="text-body text-center text-[#5C5C5C] font-oxygen text-lg md:text-xl leading-relaxed">
       All net proceeds are collected through<br>
-      <a href="#veritas" class="text-[#406c3a] no-underline font-semibold" style="font-family: var(--font-oxygen);">VERITAS FOUNDATION</a><br>
+      <a href="#veritas" class="text-[#406c3a] no-underline font-semibold font-oxygen hover:text-[#4d8346] transition-colors">VERITAS FOUNDATION</a><br>
       and distributed to cancer related charities<br>supporting children and their families.
     </p>
   </div>
